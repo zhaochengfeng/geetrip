@@ -40,7 +40,7 @@
     [GEHomeNetWorkHelp getDestinationsSuccess:^(id responseObject) {
         NSLog(@"%@",responseObject);
         _dataArray = [DestinationModel getSortedDataArrayWithResponseObject:responseObject];
-        
+        NSLog(@"ddd");
         [self.myTableView reloadData];
     } failure:^(NSError *error) {
         
