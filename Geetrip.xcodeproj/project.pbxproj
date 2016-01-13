@@ -40,6 +40,10 @@
 		891A377E1C4603F900E2276D /* GEOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A377D1C4603F900E2276D /* GEOrderViewController.m */; };
 		891A37811C46040A00E2276D /* GEPayInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A37801C46040A00E2276D /* GEPayInfoViewController.m */; };
 		891A37841C46041C00E2276D /* GEFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A37831C46041C00E2276D /* GEFriendsViewController.m */; };
+		8948A8D11C4659410004FC2F /* GEWorldListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D01C4659410004FC2F /* GEWorldListViewController.m */; };
+		8948A8D41C465C2F0004FC2F /* DestinationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D31C465C2F0004FC2F /* DestinationModel.m */; };
+		8948A8D71C465C720004FC2F /* DestinationChildModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D61C465C720004FC2F /* DestinationChildModel.m */; };
+		8948A8DA1C4663460004FC2F /* GEDestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -121,6 +125,14 @@
 		891A37801C46040A00E2276D /* GEPayInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPayInfoViewController.m; sourceTree = "<group>"; };
 		891A37821C46041C00E2276D /* GEFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEFriendsViewController.h; sourceTree = "<group>"; };
 		891A37831C46041C00E2276D /* GEFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEFriendsViewController.m; sourceTree = "<group>"; };
+		8948A8CF1C4659410004FC2F /* GEWorldListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEWorldListViewController.h; sourceTree = "<group>"; };
+		8948A8D01C4659410004FC2F /* GEWorldListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEWorldListViewController.m; sourceTree = "<group>"; };
+		8948A8D21C465C2F0004FC2F /* DestinationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationModel.h; sourceTree = "<group>"; };
+		8948A8D31C465C2F0004FC2F /* DestinationModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationModel.m; sourceTree = "<group>"; };
+		8948A8D51C465C720004FC2F /* DestinationChildModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationChildModel.h; sourceTree = "<group>"; };
+		8948A8D61C465C720004FC2F /* DestinationChildModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationChildModel.m; sourceTree = "<group>"; };
+		8948A8D81C4663460004FC2F /* GEDestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEDestionTableViewCell.h; sourceTree = "<group>"; };
+		8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEDestionTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,6 +166,7 @@
 		713CC7151C44A61200E6916D /* ContentViewController */ = {
 			isa = PBXGroup;
 			children = (
+				8948A8CE1C4659110004FC2F /* WorldListVc */,
 				891A37721C4603A400E2276D /* AboutUs */,
 				891A37711C46039A00E2276D /* Setting */,
 				891A37701C46036A00E2276D /* SpecialTreatment */,
@@ -185,13 +198,13 @@
 			name = LeftMenu;
 			sourceTree = "<group>";
 		};
-		713CC71E1C44A69A00E6916D /* CustomNavigationController */ = {
+		713CC71E1C44A69A00E6916D /* BaseNavigationController */ = {
 			isa = PBXGroup;
 			children = (
 				717C54FA1C43EA7B001481BD /* ADNavigationController.h */,
 				717C54FB1C43EA7B001481BD /* ADNavigationController.m */,
 			);
-			name = CustomNavigationController;
+			name = BaseNavigationController;
 			sourceTree = "<group>";
 		};
 		713CC7251C44C15600E6916D /* Category */ = {
@@ -305,9 +318,8 @@
 		71914C281B524F4900762B8F /* BaseViewController */ = {
 			isa = PBXGroup;
 			children = (
-				713CC71E1C44A69A00E6916D /* CustomNavigationController */,
-				71914C251B524F0800762B8F /* GEBaseViewController.h */,
-				71914C261B524F0800762B8F /* GEBaseViewController.m */,
+				8948A8CD1C4658E50004FC2F /* BaseVc */,
+				713CC71E1C44A69A00E6916D /* BaseNavigationController */,
 			);
 			name = BaseViewController;
 			sourceTree = "<group>";
@@ -472,6 +484,30 @@
 			name = AboutUs;
 			sourceTree = "<group>";
 		};
+		8948A8CD1C4658E50004FC2F /* BaseVc */ = {
+			isa = PBXGroup;
+			children = (
+				71914C251B524F0800762B8F /* GEBaseViewController.h */,
+				71914C261B524F0800762B8F /* GEBaseViewController.m */,
+			);
+			name = BaseVc;
+			sourceTree = "<group>";
+		};
+		8948A8CE1C4659110004FC2F /* WorldListVc */ = {
+			isa = PBXGroup;
+			children = (
+				8948A8CF1C4659410004FC2F /* GEWorldListViewController.h */,
+				8948A8D01C4659410004FC2F /* GEWorldListViewController.m */,
+				8948A8D21C465C2F0004FC2F /* DestinationModel.h */,
+				8948A8D31C465C2F0004FC2F /* DestinationModel.m */,
+				8948A8D51C465C720004FC2F /* DestinationChildModel.h */,
+				8948A8D61C465C720004FC2F /* DestinationChildModel.m */,
+				8948A8D81C4663460004FC2F /* GEDestionTableViewCell.h */,
+				8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */,
+			);
+			name = WorldListVc;
+			sourceTree = "<group>";
+		};
 		B0F02995F7BC63C184D72EF7 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -632,6 +668,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8948A8D11C4659410004FC2F /* GEWorldListViewController.m in Sources */,
 				713CC7351C44D58900E6916D /* GEPlanOptionTableViewCell.m in Sources */,
 				712550651C2FCA1200764E2A /* TransverseTableView.m in Sources */,
 				716E1E431B7B8E3800BD3E6F /* GEDetailViewController.m in Sources */,
@@ -643,6 +680,7 @@
 				717C54F91C43E850001481BD /* GEMenuViewController.m in Sources */,
 				713CC7321C44D31B00E6916D /* GEPlanOptionModel.m in Sources */,
 				71443ECF1BD34C8A00F6D294 /* GEHomeNetWorkHelp.m in Sources */,
+				8948A8D41C465C2F0004FC2F /* DestinationModel.m in Sources */,
 				717C54F41C43E6CB001481BD /* ICSDrawerController.m in Sources */,
 				71EC06DC1B51E63000E8505C /* main.m in Sources */,
 				71963A8F1BD381AA00BBD364 /* PlanModel.m in Sources */,
@@ -654,9 +692,11 @@
 				891A37751C4603C200E2276D /* GEAboutViewController.m in Sources */,
 				71914C271B524F0800762B8F /* GEBaseViewController.m in Sources */,
 				891A376C1C45F6C600E2276D /* SearchModel.m in Sources */,
+				8948A8DA1C4663460004FC2F /* GEDestionTableViewCell.m in Sources */,
 				891A37841C46041C00E2276D /* GEFriendsViewController.m in Sources */,
 				7153764F1C31741C00EF9ED1 /* GEPlanCell.m in Sources */,
 				71914C2C1B524F9700762B8F /* GEHomeViewController.m in Sources */,
+				8948A8D71C465C720004FC2F /* DestinationChildModel.m in Sources */,
 				891A37811C46040A00E2276D /* GEPayInfoViewController.m in Sources */,
 				713CC71C1C44A66300E6916D /* GEUserViewController.m in Sources */,
 				717C54FC1C43EA7B001481BD /* ADNavigationController.m in Sources */,

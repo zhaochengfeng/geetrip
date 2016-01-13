@@ -16,4 +16,6 @@
 
 + (NSURLSessionDataTask *)getSearchContentWithKeyword:(NSString *)keyword success:(void (^)(id responseObject))successBlock failure:(void (^)(NSError *error))failureBlock;
 
++ (NSURLSessionDataTask *)getDestinationsSuccess:(void (^)(id responseObject))successBlock failure:(void (^)(NSError *error))failureBlock;
+
 @end

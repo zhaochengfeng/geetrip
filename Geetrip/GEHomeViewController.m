@@ -14,6 +14,7 @@
 #import "ADTranTableView.h"
 #import "GEPlanCell.h"
 #import "SearchModel.h"
+#import "GEWorldListViewController.h"
 
 #define SearchTableViewTag 100
 #define PlanTableViewTag 200
@@ -130,7 +131,7 @@
     UIButton *leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 44)];
     leftButton.backgroundColor = [UIColor clearColor];
     [leftButton setImage:[UIImage imageNamed:@"world"] forState:UIControlStateNormal];
-    [leftButton addTarget:self.drawer action:@selector(open) forControlEvents:UIControlEventTouchUpInside];
+    [leftButton addTarget:self action:@selector(openWorldList) forControlEvents:UIControlEventTouchUpInside];
     leftButton.titleLabel.font = [UIFont systemFontOfSize:14];
 
     [leftButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -153,7 +154,6 @@
     
     UIButton *right3 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
     right3.backgroundColor = [UIColor clearColor];
-//    [right3 setImage:[UIImage imageNamed:@"list"] forState:UIControlStateNormal];
     [right3 setTitle:@"取消" forState:UIControlStateNormal];
     [right3 addTarget:self action:@selector(cancelSarch) forControlEvents:UIControlEventTouchUpInside];
     [right3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
@@ -239,12 +239,12 @@
 
 - (void)loadThemeTableView
 {
-    self.themeTableView = [[TransverseTableView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - Cell_height, SCREEN_WIDTH - Cell_width, Cell_height)];
+    self.themeTableView = [[TransverseTableView alloc] initWithFrame:CGRectMake(Cell_width, SCREEN_HEIGHT - Cell_height, SCREEN_WIDTH - Cell_width, Cell_height)];
     self.themeTableView.tag = ThemeTableViewTag;
     self.themeTableView.recordDelegate = self;
     [self.view addSubview:self.themeTableView];
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - Cell_width, SCREEN_HEIGHT - Cell_height, Cell_width, Cell_height)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - Cell_height, Cell_width, Cell_height)];
     [self.view addSubview:button];
     button.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 30, 0);
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0.5, Cell_height)];
@@ -364,7 +364,6 @@
         UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:reuseId];
         if (cell == nil) {
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:reuseId];
-            cell.selectionStyle = UITableViewCellSelectionStyleNone;
         }
         
         SearchModel *model = [self.searchDataArray objectAtIndex:indexPath.row];
@@ -398,6 +397,7 @@
 {
     [self.mySearchBar resignFirstResponder];
     if (tableView.tag == SearchTableViewTag) {
+        [tableView deselectRowAtIndexPath:indexPath animated:YES];
         GEDetailViewController *detail = [[GEDetailViewController alloc] init];
         [self.navigationController pushViewController:detail animated:YES];
     }else{
@@ -408,13 +408,22 @@
     }
 }
 
+//左导航点击
+- (void)openWorldList
+{
+    GEWorldListViewController *listVc = [[GEWorldListViewController alloc] init];
+    [self.navigationController pushViewController:listVc animated:YES];
+}
+
 #pragma mark ----------------ICSDrawerControllerPresenting--------------------
 - (void)drawerControllerWillOpen:(ICSDrawerController *)drawerController{
     self.view.userInteractionEnabled = NO;
+    self.navigationController.navigationBar.userInteractionEnabled = NO;
 }
 
 - (void)drawerControllerDidClose:(ICSDrawerController *)drawerController{
     self.view.userInteractionEnabled = YES;
+    self.navigationController.navigationBar.userInteractionEnabled = YES;
 }
 
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
