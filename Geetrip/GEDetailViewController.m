@@ -55,7 +55,7 @@
 - (void)loadToolBar
 {
     self.toolButton = [[UIButton alloc] initWithFrame:CGRectMake(20, SCREEN_HEIGHT - 60, SCREEN_WIDTH - 40, 50)];
-    self.toolButton.backgroundColor = [UIColor geBlueColor];
+    self.toolButton.backgroundColor = [UIColor geRedColor];
     
     [self.toolButton setTitle:@" 确定并支付" forState:UIControlStateNormal];
     [self.toolButton setImage:[UIImage imageNamed:@"confirm"] forState:UIControlStateNormal];
@@ -65,13 +65,17 @@
     [self.view addSubview:self.toolButton];
     
     CGFloat width = (SCREEN_WIDTH - 40) / 2.0 - 24;
-    UILabel *priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(13, 10, width, 30)];
-    priceLabel.backgroundColor = [UIColor whiteColor];
-    priceLabel.layer.cornerRadius = 12;
-    priceLabel.layer.masksToBounds = YES;
+    
+    UIView *priceView = [[UIView alloc] initWithFrame:CGRectMake(13, 10, width, 30)];
+    priceView.backgroundColor = [UIColor whiteColor];
+    priceView.layer.cornerRadius = 12;
+    priceView.layer.masksToBounds = YES;
+    priceView.alpha = 0.7;
+    [self.toolButton addSubview:priceView];
 
+    UILabel *priceLabel = [[UILabel alloc] initWithFrame:CGRectMake(13, 10, width, 30)];
     priceLabel.textAlignment = NSTextAlignmentCenter;
-    priceLabel.textColor = [UIColor geBlueColor];
+    priceLabel.textColor = [UIColor blackColor];
     priceLabel.font = [UIFont systemFontOfSize:16];
     priceLabel.text = @"合计:￥230,031";
     [self.toolButton addSubview:priceLabel];

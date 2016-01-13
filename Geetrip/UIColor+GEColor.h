@@ -14,6 +14,6 @@
 + (UIColor *)geetripGreenColor;
 + (UIColor *)geetripYellowColor;
 + (UIColor *)backGrayColor;
-+ (UIColor *)geBlueColor;
++ (UIColor *)geRedColor;
 
 @end

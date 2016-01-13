@@ -22,6 +22,9 @@
 @property (nonatomic,strong) UIButton *tableHeaderView;
 @property (nonatomic,strong) NSArray *tabelArr;
 
+@property (nonatomic,strong) UIImageView *iconImageView;
+@property (nonatomic,strong) UILabel *nameLabel;
+
 @end
 
 @implementation GEMenuViewController
@@ -44,7 +47,20 @@
 
 - (void)loadHeaderSubViews
 {
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15, 20, SCREEN_WIDTH - 30, self.tableHeaderView.frame.size.height - 20)];
+    CGFloat headerHeight = self.tableHeaderView.frame.size.height - 20;
+    CGFloat iconWidth = 30;
+    
+    self.iconImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, iconWidth, iconWidth)];
+    self.iconImageView.center = CGPointMake(15 + iconWidth/2.0, 20 + headerHeight/2.0);
+    self.iconImageView.backgroundColor = [UIColor lightGrayColor];
+    self.iconImageView.layer.masksToBounds = YES;
+    self.iconImageView.layer.cornerRadius = iconWidth/2.0;
+    self.iconImageView.contentMode = UIViewContentModeScaleAspectFit;
+    self.iconImageView.image = [UIImage imageNamed:@"me"];
+    [self.tableHeaderView addSubview:self.iconImageView];
+    
+    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15 + iconWidth + 10, 20, SCREEN_WIDTH - 40 - iconWidth, self.tableHeaderView.frame.size.height - 20)];
+    nameLabel.font = [UIFont systemFontOfSize:15];
     nameLabel.text = @"未登录";
     [self.tableHeaderView addSubview:nameLabel];
     

@@ -30,9 +30,9 @@
     return [UIColor colorWithRed:240/255.0 green:238/255.0 blue:245/255.0 alpha:1];
 }
 
-+ (UIColor *)geBlueColor
++ (UIColor *)geRedColor
 {
-    return [UIColor colorWithRed:0/255.0 green:36/255.0 blue:76/255.0 alpha:1];
+    return [UIColor colorWithRed:255/255.0 green:64/255.0 blue:122/255.0 alpha:1];
 }
 
 @end
