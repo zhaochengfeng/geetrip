@@ -7,6 +7,9 @@
 //
 
 #import "AppDelegate.h"
+#import "GEMenuViewController.h"
+#import "ICSDrawerController.h"
+#import "GEHomeViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +20,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.backgroundColor = [UIColor whiteColor];
+    
+    GEMenuViewController *menu = [[GEMenuViewController alloc] init];
+    
+    GEHomeViewController *vc = [GEHomeViewController defaultHomeManager];
+    ADNavigationController *nc = [[ADNavigationController alloc] initWithRootViewController:vc];
+    
+    ICSDrawerController *drawer = [[ICSDrawerController alloc] initWithLeftViewController:menu centerViewController:vc rootVc:nc];
+    
+    self.window.rootViewController = drawer;
+    
+    [self.window makeKeyAndVisible];
     return YES;
 }
 

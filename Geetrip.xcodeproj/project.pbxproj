@@ -7,13 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		712550651C2FCA1200764E2A /* TransverseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 712550621C2FCA1200764E2A /* TransverseTableView.m */; };
+		712550661C2FCA1200764E2A /* ADImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 712550641C2FCA1200764E2A /* ADImageViewCell.m */; };
+		713CC71C1C44A66300E6916D /* GEUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CC71B1C44A66300E6916D /* GEUserViewController.m */; };
+		713CC72B1C44C23500E6916D /* UIColor+GEColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CC72A1C44C23500E6916D /* UIColor+GEColor.m */; };
+		713CC7321C44D31B00E6916D /* GEPlanOptionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CC7311C44D31B00E6916D /* GEPlanOptionModel.m */; };
+		713CC7351C44D58900E6916D /* GEPlanOptionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CC7341C44D58900E6916D /* GEPlanOptionTableViewCell.m */; };
+		71443ECF1BD34C8A00F6D294 /* GEHomeNetWorkHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 71443ECE1BD34C8A00F6D294 /* GEHomeNetWorkHelp.m */; };
+		715376471C316C9A00EF9ED1 /* ADTranTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 715376461C316C9A00EF9ED1 /* ADTranTableView.m */; };
+		7153764B1C316D8200EF9ED1 /* ADTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7153764A1C316D8200EF9ED1 /* ADTableViewCell.m */; };
+		7153764F1C31741C00EF9ED1 /* GEPlanCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 7153764E1C31741C00EF9ED1 /* GEPlanCell.m */; };
+		716E1E431B7B8E3800BD3E6F /* GEDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 716E1E421B7B8E3800BD3E6F /* GEDetailViewController.m */; };
+		717C54F41C43E6CB001481BD /* ICSDrawerController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717C54F11C43E6CB001481BD /* ICSDrawerController.m */; };
+		717C54F51C43E6CB001481BD /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 717C54F31C43E6CB001481BD /* ICSDropShadowView.m */; };
+		717C54F91C43E850001481BD /* GEMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717C54F81C43E850001481BD /* GEMenuViewController.m */; };
+		717C54FC1C43EA7B001481BD /* ADNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717C54FB1C43EA7B001481BD /* ADNavigationController.m */; };
+		71914C271B524F0800762B8F /* GEBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71914C261B524F0800762B8F /* GEBaseViewController.m */; };
+		71914C2C1B524F9700762B8F /* GEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71914C2B1B524F9700762B8F /* GEHomeViewController.m */; };
+		71963A8B1BD3717E00BBD364 /* ActListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71963A8A1BD3717E00BBD364 /* ActListModel.m */; };
+		71963A8F1BD381AA00BBD364 /* PlanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71963A8E1BD381AA00BBD364 /* PlanModel.m */; };
 		71EC06DC1B51E63000E8505C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC06DB1B51E63000E8505C /* main.m */; };
 		71EC06DF1B51E63000E8505C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC06DE1B51E63000E8505C /* AppDelegate.m */; };
-		71EC06E21B51E63000E8505C /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC06E11B51E63000E8505C /* ViewController.m */; };
 		71EC06E51B51E63000E8505C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71EC06E31B51E63000E8505C /* Main.storyboard */; };
 		71EC06E71B51E63000E8505C /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 71EC06E61B51E63000E8505C /* Images.xcassets */; };
 		71EC06EA1B51E63000E8505C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71EC06E81B51E63000E8505C /* LaunchScreen.xib */; };
 		71EC06F61B51E63000E8505C /* GeetripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC06F51B51E63000E8505C /* GeetripTests.m */; };
+		81F512057C7585B51140051A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DB60923B55E4320F73F93C /* libPods.a */; };
+		891A376C1C45F6C600E2276D /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A376B1C45F6C600E2276D /* SearchModel.m */; };
+		891A37751C4603C200E2276D /* GEAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A37741C4603C200E2276D /* GEAboutViewController.m */; };
+		891A37781C4603D300E2276D /* GESettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A37771C4603D300E2276D /* GESettingViewController.m */; };
+		891A377B1C4603E800E2276D /* GESpecialViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A377A1C4603E800E2276D /* GESpecialViewController.m */; };
+		891A377E1C4603F900E2276D /* GEOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A377D1C4603F900E2276D /* GEOrderViewController.m */; };
+		891A37811C46040A00E2276D /* GEPayInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A37801C46040A00E2276D /* GEPayInfoViewController.m */; };
+		891A37841C46041C00E2276D /* GEFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A37831C46041C00E2276D /* GEFriendsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,19 +53,74 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		279E84D304BF291A0332DE1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		55F78F825F970E01DDCDF04C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		712550611C2FCA1200764E2A /* TransverseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransverseTableView.h; sourceTree = "<group>"; };
+		712550621C2FCA1200764E2A /* TransverseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransverseTableView.m; sourceTree = "<group>"; };
+		712550631C2FCA1200764E2A /* ADImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADImageViewCell.h; sourceTree = "<group>"; };
+		712550641C2FCA1200764E2A /* ADImageViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADImageViewCell.m; sourceTree = "<group>"; };
+		713CC71A1C44A66300E6916D /* GEUserViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEUserViewController.h; sourceTree = "<group>"; };
+		713CC71B1C44A66300E6916D /* GEUserViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEUserViewController.m; sourceTree = "<group>"; };
+		713CC7291C44C23500E6916D /* UIColor+GEColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+GEColor.h"; sourceTree = "<group>"; };
+		713CC72A1C44C23500E6916D /* UIColor+GEColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+GEColor.m"; sourceTree = "<group>"; };
+		713CC7301C44D31B00E6916D /* GEPlanOptionModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPlanOptionModel.h; sourceTree = "<group>"; };
+		713CC7311C44D31B00E6916D /* GEPlanOptionModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPlanOptionModel.m; sourceTree = "<group>"; };
+		713CC7331C44D58900E6916D /* GEPlanOptionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPlanOptionTableViewCell.h; sourceTree = "<group>"; };
+		713CC7341C44D58900E6916D /* GEPlanOptionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPlanOptionTableViewCell.m; sourceTree = "<group>"; };
+		71443ECD1BD34C8A00F6D294 /* GEHomeNetWorkHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEHomeNetWorkHelp.h; sourceTree = "<group>"; };
+		71443ECE1BD34C8A00F6D294 /* GEHomeNetWorkHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEHomeNetWorkHelp.m; sourceTree = "<group>"; };
+		715376451C316C9A00EF9ED1 /* ADTranTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTranTableView.h; sourceTree = "<group>"; };
+		715376461C316C9A00EF9ED1 /* ADTranTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTranTableView.m; sourceTree = "<group>"; };
+		715376491C316D8200EF9ED1 /* ADTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADTableViewCell.h; sourceTree = "<group>"; };
+		7153764A1C316D8200EF9ED1 /* ADTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADTableViewCell.m; sourceTree = "<group>"; };
+		7153764D1C31741C00EF9ED1 /* GEPlanCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPlanCell.h; sourceTree = "<group>"; };
+		7153764E1C31741C00EF9ED1 /* GEPlanCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPlanCell.m; sourceTree = "<group>"; };
+		716E1E411B7B8E3800BD3E6F /* GEDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEDetailViewController.h; sourceTree = "<group>"; };
+		716E1E421B7B8E3800BD3E6F /* GEDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEDetailViewController.m; sourceTree = "<group>"; };
+		717C54F01C43E6CB001481BD /* ICSDrawerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDrawerController.h; sourceTree = "<group>"; };
+		717C54F11C43E6CB001481BD /* ICSDrawerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDrawerController.m; sourceTree = "<group>"; };
+		717C54F21C43E6CB001481BD /* ICSDropShadowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ICSDropShadowView.h; sourceTree = "<group>"; };
+		717C54F31C43E6CB001481BD /* ICSDropShadowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ICSDropShadowView.m; sourceTree = "<group>"; };
+		717C54F71C43E850001481BD /* GEMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEMenuViewController.h; sourceTree = "<group>"; };
+		717C54F81C43E850001481BD /* GEMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMenuViewController.m; sourceTree = "<group>"; };
+		717C54FA1C43EA7B001481BD /* ADNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADNavigationController.h; sourceTree = "<group>"; };
+		717C54FB1C43EA7B001481BD /* ADNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADNavigationController.m; sourceTree = "<group>"; };
+		71914C251B524F0800762B8F /* GEBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEBaseViewController.h; sourceTree = "<group>"; };
+		71914C261B524F0800762B8F /* GEBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEBaseViewController.m; sourceTree = "<group>"; };
+		71914C2A1B524F9700762B8F /* GEHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEHomeViewController.h; sourceTree = "<group>"; };
+		71914C2B1B524F9700762B8F /* GEHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEHomeViewController.m; sourceTree = "<group>"; };
+		71963A891BD3717E00BBD364 /* ActListModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ActListModel.h; sourceTree = "<group>"; };
+		71963A8A1BD3717E00BBD364 /* ActListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActListModel.m; sourceTree = "<group>"; };
+		71963A8D1BD381AA00BBD364 /* PlanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanModel.h; sourceTree = "<group>"; };
+		71963A8E1BD381AA00BBD364 /* PlanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanModel.m; sourceTree = "<group>"; };
+		71E12CCB1B54014B0052DC0A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		71E12CCC1B5404570052DC0A /* DefineMethodHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineMethodHeader.h; sourceTree = "<group>"; };
 		71EC06D61B51E63000E8505C /* Geetrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geetrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71EC06DA1B51E63000E8505C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71EC06DB1B51E63000E8505C /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		71EC06DD1B51E63000E8505C /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		71EC06DE1B51E63000E8505C /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		71EC06E01B51E63000E8505C /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		71EC06E11B51E63000E8505C /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		71EC06E41B51E63000E8505C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		71EC06E61B51E63000E8505C /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		71EC06E91B51E63000E8505C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		71EC06EF1B51E63000E8505C /* GeetripTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GeetripTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		71EC06F41B51E63000E8505C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71EC06F51B51E63000E8505C /* GeetripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeetripTests.m; sourceTree = "<group>"; };
+		81DB60923B55E4320F73F93C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		891A376A1C45F6C600E2276D /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
+		891A376B1C45F6C600E2276D /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
+		891A37731C4603C200E2276D /* GEAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEAboutViewController.h; sourceTree = "<group>"; };
+		891A37741C4603C200E2276D /* GEAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEAboutViewController.m; sourceTree = "<group>"; };
+		891A37761C4603D300E2276D /* GESettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GESettingViewController.h; sourceTree = "<group>"; };
+		891A37771C4603D300E2276D /* GESettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GESettingViewController.m; sourceTree = "<group>"; };
+		891A37791C4603E800E2276D /* GESpecialViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GESpecialViewController.h; sourceTree = "<group>"; };
+		891A377A1C4603E800E2276D /* GESpecialViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GESpecialViewController.m; sourceTree = "<group>"; };
+		891A377C1C4603F900E2276D /* GEOrderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEOrderViewController.h; sourceTree = "<group>"; };
+		891A377D1C4603F900E2276D /* GEOrderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEOrderViewController.m; sourceTree = "<group>"; };
+		891A377F1C46040A00E2276D /* GEPayInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPayInfoViewController.h; sourceTree = "<group>"; };
+		891A37801C46040A00E2276D /* GEPayInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPayInfoViewController.m; sourceTree = "<group>"; };
+		891A37821C46041C00E2276D /* GEFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEFriendsViewController.h; sourceTree = "<group>"; };
+		891A37831C46041C00E2276D /* GEFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEFriendsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +128,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81F512057C7585B51140051A /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +142,227 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3463834192D15175E20FC342 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				55F78F825F970E01DDCDF04C /* Pods.debug.xcconfig */,
+				279E84D304BF291A0332DE1C /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		713CC7151C44A61200E6916D /* ContentViewController */ = {
+			isa = PBXGroup;
+			children = (
+				891A37721C4603A400E2276D /* AboutUs */,
+				891A37711C46039A00E2276D /* Setting */,
+				891A37701C46036A00E2276D /* SpecialTreatment */,
+				891A376F1C46034100E2276D /* HistoryOrder */,
+				891A376E1C46032800E2276D /* PaymentInfomation */,
+				891A376D1C46031A00E2276D /* Friends */,
+				713CC72C1C44D19100E6916D /* DetailViewControllers */,
+				713CC7161C44A62800E6916D /* UserViewControllers */,
+				71914C291B524F7100762B8F /* HomeViewController */,
+			);
+			name = ContentViewController;
+			sourceTree = "<group>";
+		};
+		713CC7161C44A62800E6916D /* UserViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				713CC71A1C44A66300E6916D /* GEUserViewController.h */,
+				713CC71B1C44A66300E6916D /* GEUserViewController.m */,
+			);
+			name = UserViewControllers;
+			sourceTree = "<group>";
+		};
+		713CC71D1C44A68900E6916D /* LeftMenu */ = {
+			isa = PBXGroup;
+			children = (
+				717C54F71C43E850001481BD /* GEMenuViewController.h */,
+				717C54F81C43E850001481BD /* GEMenuViewController.m */,
+			);
+			name = LeftMenu;
+			sourceTree = "<group>";
+		};
+		713CC71E1C44A69A00E6916D /* CustomNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				717C54FA1C43EA7B001481BD /* ADNavigationController.h */,
+				717C54FB1C43EA7B001481BD /* ADNavigationController.m */,
+			);
+			name = CustomNavigationController;
+			sourceTree = "<group>";
+		};
+		713CC7251C44C15600E6916D /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				713CC7291C44C23500E6916D /* UIColor+GEColor.h */,
+				713CC72A1C44C23500E6916D /* UIColor+GEColor.m */,
+			);
+			name = Category;
+			sourceTree = "<group>";
+		};
+		713CC72C1C44D19100E6916D /* DetailViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				713CC72F1C44D25B00E6916D /* Model */,
+				713CC72E1C44D25000E6916D /* Cell */,
+				713CC72D1C44D24200E6916D /* ViewControllers */,
+			);
+			name = DetailViewControllers;
+			sourceTree = "<group>";
+		};
+		713CC72D1C44D24200E6916D /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				716E1E411B7B8E3800BD3E6F /* GEDetailViewController.h */,
+				716E1E421B7B8E3800BD3E6F /* GEDetailViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		713CC72E1C44D25000E6916D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				713CC7331C44D58900E6916D /* GEPlanOptionTableViewCell.h */,
+				713CC7341C44D58900E6916D /* GEPlanOptionTableViewCell.m */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
+		713CC72F1C44D25B00E6916D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				713CC7301C44D31B00E6916D /* GEPlanOptionModel.h */,
+				713CC7311C44D31B00E6916D /* GEPlanOptionModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		71443ECC1BD34C5500F6D294 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				71443ECD1BD34C8A00F6D294 /* GEHomeNetWorkHelp.h */,
+				71443ECE1BD34C8A00F6D294 /* GEHomeNetWorkHelp.m */,
+			);
+			name = NetWork;
+			sourceTree = "<group>";
+		};
+		715376481C316D6000EF9ED1 /* CustomTableView */ = {
+			isa = PBXGroup;
+			children = (
+				712550611C2FCA1200764E2A /* TransverseTableView.h */,
+				712550621C2FCA1200764E2A /* TransverseTableView.m */,
+				712550631C2FCA1200764E2A /* ADImageViewCell.h */,
+				712550641C2FCA1200764E2A /* ADImageViewCell.m */,
+				715376451C316C9A00EF9ED1 /* ADTranTableView.h */,
+				715376461C316C9A00EF9ED1 /* ADTranTableView.m */,
+				715376491C316D8200EF9ED1 /* ADTableViewCell.h */,
+				7153764A1C316D8200EF9ED1 /* ADTableViewCell.m */,
+			);
+			name = CustomTableView;
+			sourceTree = "<group>";
+		};
+		7153764C1C316E3800EF9ED1 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				71914C2A1B524F9700762B8F /* GEHomeViewController.h */,
+				71914C2B1B524F9700762B8F /* GEHomeViewController.m */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		717C54EF1C43E6CB001481BD /* ICSDrawerController */ = {
+			isa = PBXGroup;
+			children = (
+				717C54F01C43E6CB001481BD /* ICSDrawerController.h */,
+				717C54F11C43E6CB001481BD /* ICSDrawerController.m */,
+				717C54F21C43E6CB001481BD /* ICSDropShadowView.h */,
+				717C54F31C43E6CB001481BD /* ICSDropShadowView.m */,
+			);
+			path = ICSDrawerController;
+			sourceTree = "<group>";
+		};
+		717C54F61C43E81F001481BD /* MenuViewController */ = {
+			isa = PBXGroup;
+			children = (
+				713CC71D1C44A68900E6916D /* LeftMenu */,
+				717C54EF1C43E6CB001481BD /* ICSDrawerController */,
+			);
+			name = MenuViewController;
+			sourceTree = "<group>";
+		};
+		71914C231B524EC400762B8F /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				71EC06DD1B51E63000E8505C /* AppDelegate.h */,
+				71EC06DE1B51E63000E8505C /* AppDelegate.m */,
+			);
+			name = AppDelegate;
+			sourceTree = "<group>";
+		};
+		71914C281B524F4900762B8F /* BaseViewController */ = {
+			isa = PBXGroup;
+			children = (
+				713CC71E1C44A69A00E6916D /* CustomNavigationController */,
+				71914C251B524F0800762B8F /* GEBaseViewController.h */,
+				71914C261B524F0800762B8F /* GEBaseViewController.m */,
+			);
+			name = BaseViewController;
+			sourceTree = "<group>";
+		};
+		71914C291B524F7100762B8F /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				7153764C1C316E3800EF9ED1 /* ViewControllers */,
+				715376481C316D6000EF9ED1 /* CustomTableView */,
+				71AB211F1BDCB74B00344B67 /* View */,
+				71963A8C1BD3811A00BBD364 /* Model */,
+				71443ECC1BD34C5500F6D294 /* NetWork */,
+			);
+			name = HomeViewController;
+			sourceTree = "<group>";
+		};
+		71963A8C1BD3811A00BBD364 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				71963A891BD3717E00BBD364 /* ActListModel.h */,
+				71963A8A1BD3717E00BBD364 /* ActListModel.m */,
+				71963A8D1BD381AA00BBD364 /* PlanModel.h */,
+				71963A8E1BD381AA00BBD364 /* PlanModel.m */,
+				891A376A1C45F6C600E2276D /* SearchModel.h */,
+				891A376B1C45F6C600E2276D /* SearchModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		71AB211F1BDCB74B00344B67 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				7153764D1C31741C00EF9ED1 /* GEPlanCell.h */,
+				7153764E1C31741C00EF9ED1 /* GEPlanCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		71E12CCD1B5405420052DC0A /* ConstFile */ = {
+			isa = PBXGroup;
+			children = (
+				71E12CCB1B54014B0052DC0A /* PrefixHeader.pch */,
+				71E12CCC1B5404570052DC0A /* DefineMethodHeader.h */,
+			);
+			name = ConstFile;
+			sourceTree = "<group>";
+		};
 		71EC06CD1B51E63000E8505C = {
 			isa = PBXGroup;
 			children = (
 				71EC06D81B51E63000E8505C /* Geetrip */,
 				71EC06F21B51E63000E8505C /* GeetripTests */,
 				71EC06D71B51E63000E8505C /* Products */,
+				3463834192D15175E20FC342 /* Pods */,
+				B0F02995F7BC63C184D72EF7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,10 +378,12 @@
 		71EC06D81B51E63000E8505C /* Geetrip */ = {
 			isa = PBXGroup;
 			children = (
-				71EC06DD1B51E63000E8505C /* AppDelegate.h */,
-				71EC06DE1B51E63000E8505C /* AppDelegate.m */,
-				71EC06E01B51E63000E8505C /* ViewController.h */,
-				71EC06E11B51E63000E8505C /* ViewController.m */,
+				71914C281B524F4900762B8F /* BaseViewController */,
+				717C54F61C43E81F001481BD /* MenuViewController */,
+				713CC7151C44A61200E6916D /* ContentViewController */,
+				71914C231B524EC400762B8F /* AppDelegate */,
+				713CC7251C44C15600E6916D /* Category */,
+				71E12CCD1B5405420052DC0A /* ConstFile */,
 				71EC06E31B51E63000E8505C /* Main.storyboard */,
 				71EC06E61B51E63000E8505C /* Images.xcassets */,
 				71EC06E81B51E63000E8505C /* LaunchScreen.xib */,
@@ -119,6 +418,68 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		891A376D1C46031A00E2276D /* Friends */ = {
+			isa = PBXGroup;
+			children = (
+				891A37821C46041C00E2276D /* GEFriendsViewController.h */,
+				891A37831C46041C00E2276D /* GEFriendsViewController.m */,
+			);
+			name = Friends;
+			sourceTree = "<group>";
+		};
+		891A376E1C46032800E2276D /* PaymentInfomation */ = {
+			isa = PBXGroup;
+			children = (
+				891A377F1C46040A00E2276D /* GEPayInfoViewController.h */,
+				891A37801C46040A00E2276D /* GEPayInfoViewController.m */,
+			);
+			name = PaymentInfomation;
+			sourceTree = "<group>";
+		};
+		891A376F1C46034100E2276D /* HistoryOrder */ = {
+			isa = PBXGroup;
+			children = (
+				891A377C1C4603F900E2276D /* GEOrderViewController.h */,
+				891A377D1C4603F900E2276D /* GEOrderViewController.m */,
+			);
+			name = HistoryOrder;
+			sourceTree = "<group>";
+		};
+		891A37701C46036A00E2276D /* SpecialTreatment */ = {
+			isa = PBXGroup;
+			children = (
+				891A37791C4603E800E2276D /* GESpecialViewController.h */,
+				891A377A1C4603E800E2276D /* GESpecialViewController.m */,
+			);
+			name = SpecialTreatment;
+			sourceTree = "<group>";
+		};
+		891A37711C46039A00E2276D /* Setting */ = {
+			isa = PBXGroup;
+			children = (
+				891A37761C4603D300E2276D /* GESettingViewController.h */,
+				891A37771C4603D300E2276D /* GESettingViewController.m */,
+			);
+			name = Setting;
+			sourceTree = "<group>";
+		};
+		891A37721C4603A400E2276D /* AboutUs */ = {
+			isa = PBXGroup;
+			children = (
+				891A37731C4603C200E2276D /* GEAboutViewController.h */,
+				891A37741C4603C200E2276D /* GEAboutViewController.m */,
+			);
+			name = AboutUs;
+			sourceTree = "<group>";
+		};
+		B0F02995F7BC63C184D72EF7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81DB60923B55E4320F73F93C /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +487,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 71EC06F91B51E63000E8505C /* Build configuration list for PBXNativeTarget "Geetrip" */;
 			buildPhases = (
+				B05FD899D6DCF2641B9592F2 /* Check Pods Manifest.lock */,
 				71EC06D21B51E63000E8505C /* Sources */,
 				71EC06D31B51E63000E8505C /* Frameworks */,
 				71EC06D41B51E63000E8505C /* Resources */,
+				C2A27ACE74D2D0DD68C4A0F7 /* Copy Pods Resources */,
+				38BA41F32BE208C6AC0151BB /* Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -163,7 +527,8 @@
 		71EC06CE1B51E63000E8505C /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Geetrip Inc.";
 				TargetAttributes = {
 					71EC06D51B51E63000E8505C = {
@@ -214,14 +579,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		38BA41F32BE208C6AC0151BB /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B05FD899D6DCF2641B9592F2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C2A27ACE74D2D0DD68C4A0F7 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		71EC06D21B51E63000E8505C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				71EC06E21B51E63000E8505C /* ViewController.m in Sources */,
+				713CC7351C44D58900E6916D /* GEPlanOptionTableViewCell.m in Sources */,
+				712550651C2FCA1200764E2A /* TransverseTableView.m in Sources */,
+				716E1E431B7B8E3800BD3E6F /* GEDetailViewController.m in Sources */,
+				717C54F51C43E6CB001481BD /* ICSDropShadowView.m in Sources */,
+				715376471C316C9A00EF9ED1 /* ADTranTableView.m in Sources */,
 				71EC06DF1B51E63000E8505C /* AppDelegate.m in Sources */,
+				712550661C2FCA1200764E2A /* ADImageViewCell.m in Sources */,
+				891A377E1C4603F900E2276D /* GEOrderViewController.m in Sources */,
+				717C54F91C43E850001481BD /* GEMenuViewController.m in Sources */,
+				713CC7321C44D31B00E6916D /* GEPlanOptionModel.m in Sources */,
+				71443ECF1BD34C8A00F6D294 /* GEHomeNetWorkHelp.m in Sources */,
+				717C54F41C43E6CB001481BD /* ICSDrawerController.m in Sources */,
 				71EC06DC1B51E63000E8505C /* main.m in Sources */,
+				71963A8F1BD381AA00BBD364 /* PlanModel.m in Sources */,
+				891A37781C4603D300E2276D /* GESettingViewController.m in Sources */,
+				891A377B1C4603E800E2276D /* GESpecialViewController.m in Sources */,
+				7153764B1C316D8200EF9ED1 /* ADTableViewCell.m in Sources */,
+				713CC72B1C44C23500E6916D /* UIColor+GEColor.m in Sources */,
+				71963A8B1BD3717E00BBD364 /* ActListModel.m in Sources */,
+				891A37751C4603C200E2276D /* GEAboutViewController.m in Sources */,
+				71914C271B524F0800762B8F /* GEBaseViewController.m in Sources */,
+				891A376C1C45F6C600E2276D /* SearchModel.m in Sources */,
+				891A37841C46041C00E2276D /* GEFriendsViewController.m in Sources */,
+				7153764F1C31741C00EF9ED1 /* GEPlanCell.m in Sources */,
+				71914C2C1B524F9700762B8F /* GEHomeViewController.m in Sources */,
+				891A37811C46040A00E2276D /* GEPayInfoViewController.m in Sources */,
+				713CC71C1C44A66300E6916D /* GEUserViewController.m in Sources */,
+				717C54FC1C43EA7B001481BD /* ADNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,6 +722,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -299,7 +738,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -336,7 +775,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
@@ -345,21 +784,42 @@
 		};
 		71EC06FA1B51E63000E8505C /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55F78F825F970E01DDCDF04C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bin Guo (28RJYDACHV)";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Geetrip/PrefixHeader.pch";
 				INFOPLIST_FILE = Geetrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.addinghome.geetrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Geetrip/Geetrip-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		71EC06FB1B51E63000E8505C /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 279E84D304BF291A0332DE1C /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer: Bin Guo (28RJYDACHV)";
+				ENABLE_BITCODE = NO;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/Geetrip/PrefixHeader.pch";
 				INFOPLIST_FILE = Geetrip/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.addinghome.geetrip;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Geetrip/Geetrip-Bridging-Header.h";
 			};
 			name = Release;
 		};
@@ -367,16 +827,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = GeetripTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Neeu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Geetrip.app/Geetrip";
 			};
@@ -386,12 +844,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(SDKROOT)/Developer/Library/Frameworks",
-					"$(inherited)",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				INFOPLIST_FILE = GeetripTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.Neeu.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Geetrip.app/Geetrip";
 			};
@@ -416,6 +872,7 @@
 				71EC06FB1B51E63000E8505C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		71EC06FC1B51E63000E8505C /* Build configuration list for PBXNativeTarget "GeetripTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +881,7 @@
 				71EC06FE1B51E63000E8505C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
