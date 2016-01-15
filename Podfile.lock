@@ -14,21 +14,27 @@ PODS:
   - AFNetworking/Serialization (3.0.4)
   - AFNetworking/UIKit (3.0.4):
     - AFNetworking/NSURLSession
+  - libWeChatSDK (1.6)
   - Realm (0.97.0):
     - Realm/Headers (= 0.97.0)
   - Realm/Headers (0.97.0)
   - SDWebImage (3.7.4):
     - SDWebImage/Core (= 3.7.4)
   - SDWebImage/Core (3.7.4)
+  - WeiboSDK (3.1.3)
 
 DEPENDENCIES:
   - AFNetworking
+  - libWeChatSDK
   - Realm
   - SDWebImage
+  - WeiboSDK
 
 SPEC CHECKSUMS:
   AFNetworking: a0075feb321559dc78d9d85b55d11caa19eabb93
+  libWeChatSDK: 248280c10e6edd275e0efab54ac7ad42a62b6a57
   Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
   SDWebImage: 247edd7dd80dd6124197b0d6a17846fe9d1df968
+  WeiboSDK: acb067053668102cf07d01aa7604350162c2e466
 
 COCOAPODS: 0.39.0

@@ -40,10 +40,16 @@
 		891A377E1C4603F900E2276D /* GEOrderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A377D1C4603F900E2276D /* GEOrderViewController.m */; };
 		891A37811C46040A00E2276D /* GEPayInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A37801C46040A00E2276D /* GEPayInfoViewController.m */; };
 		891A37841C46041C00E2276D /* GEFriendsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A37831C46041C00E2276D /* GEFriendsViewController.m */; };
+		8929B96D1C4778C5008A62D2 /* GEPaymentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8929B96C1C4778C5008A62D2 /* GEPaymentViewController.m */; };
 		8948A8D11C4659410004FC2F /* GEWorldListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D01C4659410004FC2F /* GEWorldListViewController.m */; };
 		8948A8D41C465C2F0004FC2F /* DestinationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D31C465C2F0004FC2F /* DestinationModel.m */; };
 		8948A8D71C465C720004FC2F /* DestinationChildModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D61C465C720004FC2F /* DestinationChildModel.m */; };
 		8948A8DA1C4663460004FC2F /* GEDestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */; };
+		89AB60241C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB60231C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m */; };
+		89AB60301C48C1DB00D82DEF /* LXMSinaWeiboHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB60291C48C1DB00D82DEF /* LXMSinaWeiboHelper.m */; };
+		89AB60311C48C1DB00D82DEF /* LXMThirdLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB602B1C48C1DB00D82DEF /* LXMThirdLoginManager.m */; };
+		89AB60321C48C1DB00D82DEF /* LXMThirdLoginResult.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB602D1C48C1DB00D82DEF /* LXMThirdLoginResult.m */; };
+		89AB60331C48C1DB00D82DEF /* LXMWeChatHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB602F1C48C1DB00D82DEF /* LXMWeChatHelper.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -125,6 +131,8 @@
 		891A37801C46040A00E2276D /* GEPayInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPayInfoViewController.m; sourceTree = "<group>"; };
 		891A37821C46041C00E2276D /* GEFriendsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEFriendsViewController.h; sourceTree = "<group>"; };
 		891A37831C46041C00E2276D /* GEFriendsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEFriendsViewController.m; sourceTree = "<group>"; };
+		8929B96B1C4778C5008A62D2 /* GEPaymentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPaymentViewController.h; sourceTree = "<group>"; };
+		8929B96C1C4778C5008A62D2 /* GEPaymentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPaymentViewController.m; sourceTree = "<group>"; };
 		8948A8CF1C4659410004FC2F /* GEWorldListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEWorldListViewController.h; sourceTree = "<group>"; };
 		8948A8D01C4659410004FC2F /* GEWorldListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEWorldListViewController.m; sourceTree = "<group>"; };
 		8948A8D21C465C2F0004FC2F /* DestinationModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DestinationModel.h; sourceTree = "<group>"; };
@@ -133,6 +141,17 @@
 		8948A8D61C465C720004FC2F /* DestinationChildModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationChildModel.m; sourceTree = "<group>"; };
 		8948A8D81C4663460004FC2F /* GEDestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEDestionTableViewCell.h; sourceTree = "<group>"; };
 		8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEDestionTableViewCell.m; sourceTree = "<group>"; };
+		89AB60221C48BC5900D82DEF /* GEPlanDetailNetworkHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPlanDetailNetworkHelp.h; sourceTree = "<group>"; };
+		89AB60231C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPlanDetailNetworkHelp.m; sourceTree = "<group>"; };
+		89AB60271C48C1DB00D82DEF /* ADNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADNetwork.h; sourceTree = "<group>"; };
+		89AB60281C48C1DB00D82DEF /* LXMSinaWeiboHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMSinaWeiboHelper.h; sourceTree = "<group>"; };
+		89AB60291C48C1DB00D82DEF /* LXMSinaWeiboHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMSinaWeiboHelper.m; sourceTree = "<group>"; };
+		89AB602A1C48C1DB00D82DEF /* LXMThirdLoginManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMThirdLoginManager.h; sourceTree = "<group>"; };
+		89AB602B1C48C1DB00D82DEF /* LXMThirdLoginManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMThirdLoginManager.m; sourceTree = "<group>"; };
+		89AB602C1C48C1DB00D82DEF /* LXMThirdLoginResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMThirdLoginResult.h; sourceTree = "<group>"; };
+		89AB602D1C48C1DB00D82DEF /* LXMThirdLoginResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMThirdLoginResult.m; sourceTree = "<group>"; };
+		89AB602E1C48C1DB00D82DEF /* LXMWeChatHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXMWeChatHelper.h; sourceTree = "<group>"; };
+		89AB602F1C48C1DB00D82DEF /* LXMWeChatHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXMWeChatHelper.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,19 +193,19 @@
 				891A376E1C46032800E2276D /* PaymentInfomation */,
 				891A376D1C46031A00E2276D /* Friends */,
 				713CC72C1C44D19100E6916D /* DetailViewControllers */,
-				713CC7161C44A62800E6916D /* UserViewControllers */,
+				713CC7161C44A62800E6916D /* AccountCenter */,
 				71914C291B524F7100762B8F /* HomeViewController */,
 			);
 			name = ContentViewController;
 			sourceTree = "<group>";
 		};
-		713CC7161C44A62800E6916D /* UserViewControllers */ = {
+		713CC7161C44A62800E6916D /* AccountCenter */ = {
 			isa = PBXGroup;
 			children = (
-				713CC71A1C44A66300E6916D /* GEUserViewController.h */,
-				713CC71B1C44A66300E6916D /* GEUserViewController.m */,
+				89AB60261C48C19D00D82DEF /* ViewControllers */,
+				89AB60251C48C18C00D82DEF /* AccountManager */,
 			);
-			name = UserViewControllers;
+			name = AccountCenter;
 			sourceTree = "<group>";
 		};
 		713CC71D1C44A68900E6916D /* LeftMenu */ = {
@@ -222,6 +241,8 @@
 				713CC72F1C44D25B00E6916D /* Model */,
 				713CC72E1C44D25000E6916D /* Cell */,
 				713CC72D1C44D24200E6916D /* ViewControllers */,
+				89AB60221C48BC5900D82DEF /* GEPlanDetailNetworkHelp.h */,
+				89AB60231C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m */,
 			);
 			name = DetailViewControllers;
 			sourceTree = "<group>";
@@ -453,6 +474,8 @@
 			children = (
 				891A377C1C4603F900E2276D /* GEOrderViewController.h */,
 				891A377D1C4603F900E2276D /* GEOrderViewController.m */,
+				8929B96B1C4778C5008A62D2 /* GEPaymentViewController.h */,
+				8929B96C1C4778C5008A62D2 /* GEPaymentViewController.m */,
 			);
 			name = HistoryOrder;
 			sourceTree = "<group>";
@@ -506,6 +529,31 @@
 				8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */,
 			);
 			name = WorldListVc;
+			sourceTree = "<group>";
+		};
+		89AB60251C48C18C00D82DEF /* AccountManager */ = {
+			isa = PBXGroup;
+			children = (
+				89AB60271C48C1DB00D82DEF /* ADNetwork.h */,
+				89AB60281C48C1DB00D82DEF /* LXMSinaWeiboHelper.h */,
+				89AB60291C48C1DB00D82DEF /* LXMSinaWeiboHelper.m */,
+				89AB602A1C48C1DB00D82DEF /* LXMThirdLoginManager.h */,
+				89AB602B1C48C1DB00D82DEF /* LXMThirdLoginManager.m */,
+				89AB602C1C48C1DB00D82DEF /* LXMThirdLoginResult.h */,
+				89AB602D1C48C1DB00D82DEF /* LXMThirdLoginResult.m */,
+				89AB602E1C48C1DB00D82DEF /* LXMWeChatHelper.h */,
+				89AB602F1C48C1DB00D82DEF /* LXMWeChatHelper.m */,
+			);
+			name = AccountManager;
+			sourceTree = "<group>";
+		};
+		89AB60261C48C19D00D82DEF /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				713CC71A1C44A66300E6916D /* GEUserViewController.h */,
+				713CC71B1C44A66300E6916D /* GEUserViewController.m */,
+			);
+			name = ViewControllers;
 			sourceTree = "<group>";
 		};
 		B0F02995F7BC63C184D72EF7 /* Frameworks */ = {
@@ -569,6 +617,7 @@
 				TargetAttributes = {
 					71EC06D51B51E63000E8505C = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = 66246365PS;
 					};
 					71EC06EE1B51E63000E8505C = {
 						CreatedOnToolsVersion = 6.4;
@@ -669,6 +718,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8948A8D11C4659410004FC2F /* GEWorldListViewController.m in Sources */,
+				89AB60241C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m in Sources */,
 				713CC7351C44D58900E6916D /* GEPlanOptionTableViewCell.m in Sources */,
 				712550651C2FCA1200764E2A /* TransverseTableView.m in Sources */,
 				716E1E431B7B8E3800BD3E6F /* GEDetailViewController.m in Sources */,
@@ -682,12 +732,14 @@
 				71443ECF1BD34C8A00F6D294 /* GEHomeNetWorkHelp.m in Sources */,
 				8948A8D41C465C2F0004FC2F /* DestinationModel.m in Sources */,
 				717C54F41C43E6CB001481BD /* ICSDrawerController.m in Sources */,
+				89AB60331C48C1DB00D82DEF /* LXMWeChatHelper.m in Sources */,
 				71EC06DC1B51E63000E8505C /* main.m in Sources */,
 				71963A8F1BD381AA00BBD364 /* PlanModel.m in Sources */,
 				891A37781C4603D300E2276D /* GESettingViewController.m in Sources */,
 				891A377B1C4603E800E2276D /* GESpecialViewController.m in Sources */,
 				7153764B1C316D8200EF9ED1 /* ADTableViewCell.m in Sources */,
 				713CC72B1C44C23500E6916D /* UIColor+GEColor.m in Sources */,
+				89AB60311C48C1DB00D82DEF /* LXMThirdLoginManager.m in Sources */,
 				71963A8B1BD3717E00BBD364 /* ActListModel.m in Sources */,
 				891A37751C4603C200E2276D /* GEAboutViewController.m in Sources */,
 				71914C271B524F0800762B8F /* GEBaseViewController.m in Sources */,
@@ -698,7 +750,10 @@
 				71914C2C1B524F9700762B8F /* GEHomeViewController.m in Sources */,
 				8948A8D71C465C720004FC2F /* DestinationChildModel.m in Sources */,
 				891A37811C46040A00E2276D /* GEPayInfoViewController.m in Sources */,
+				89AB60321C48C1DB00D82DEF /* LXMThirdLoginResult.m in Sources */,
+				8929B96D1C4778C5008A62D2 /* GEPaymentViewController.m in Sources */,
 				713CC71C1C44A66300E6916D /* GEUserViewController.m in Sources */,
+				89AB60301C48C1DB00D82DEF /* LXMSinaWeiboHelper.m in Sources */,
 				717C54FC1C43EA7B001481BD /* ADNavigationController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -830,8 +885,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Siwei Huang (7T847263QB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Siwei Huang (7T847263QB)";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Geetrip/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/WeiboSDK\"",
+				);
 				INFOPLIST_FILE = Geetrip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -851,8 +915,17 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Siwei Huang (7T847263QB)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Siwei Huang (7T847263QB)";
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Geetrip/PrefixHeader.pch";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"${PODS_ROOT}/Headers/Public\"",
+					"\"${PODS_ROOT}/Headers/Public/AFNetworking\"",
+					"\"${PODS_ROOT}/Headers/Public/Realm\"",
+					"\"${PODS_ROOT}/Headers/Public/SDWebImage\"",
+					"\"${PODS_ROOT}/Headers/Public/WeiboSDK\"",
+				);
 				INFOPLIST_FILE = Geetrip/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

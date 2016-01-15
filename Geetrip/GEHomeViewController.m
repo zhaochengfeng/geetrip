@@ -239,6 +239,9 @@
 
 - (void)loadThemeTableView
 {
+    UIView *openMenuView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, SCREEN_HEIGHT)];
+    [self.view addSubview:openMenuView];
+    
     self.themeTableView = [[TransverseTableView alloc] initWithFrame:CGRectMake(Cell_width, SCREEN_HEIGHT - Cell_height, SCREEN_WIDTH - Cell_width, Cell_height)];
     self.themeTableView.tag = ThemeTableViewTag;
     self.themeTableView.recordDelegate = self;
@@ -334,6 +337,8 @@
 
 - (void)cancelSarch
 {
+    [_searchDataArray removeAllObjects];
+    [_searchTableView reloadData];
     [_mySearchBar resignFirstResponder];
     self.searchTableView.alpha = 0;
     _mySearchBar.text = @"";

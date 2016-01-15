@@ -8,6 +8,8 @@
 
 #import "GEDetailViewController.h"
 #import "GEPlanOptionTableViewCell.h"
+#import "GEPaymentViewController.h"
+#import "GEPlanDetailNetworkHelp.h"
 
 @interface GEDetailViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -30,6 +32,16 @@
     self.dataArray = [GEPlanOptionModel getTestArray];
     [self loadTableView];
     [self loadToolBar];
+    [self loadData];
+}
+
+- (void)loadData
+{
+    [GEPlanDetailNetworkHelp getPlanDetailWithPlanId:@"6" success:^(id responseOnject) {
+        
+    } failure:^(NSError *error) {
+        
+    }];
 }
 
 - (void)loadTableView
@@ -68,6 +80,7 @@
     
     UIView *priceView = [[UIView alloc] initWithFrame:CGRectMake(13, 10, width, 30)];
     priceView.backgroundColor = [UIColor whiteColor];
+    priceView.userInteractionEnabled = NO;
     priceView.layer.cornerRadius = 12;
     priceView.layer.masksToBounds = YES;
     priceView.alpha = 0.7;
@@ -79,6 +92,13 @@
     priceLabel.font = [UIFont systemFontOfSize:16];
     priceLabel.text = @"合计:￥230,031";
     [self.toolButton addSubview:priceLabel];
+    
+    [self.toolButton addTarget:self action:@selector(paymentCurrentOrder) forControlEvents:UIControlEventTouchUpInside];
+}
+
+- (void)paymentCurrentOrder{
+    GEPaymentViewController *payVc = [[GEPaymentViewController alloc] init];
+    [self.navigationController pushViewController:payVc animated:YES];
 }
 
 - (void)leftBarClicked
