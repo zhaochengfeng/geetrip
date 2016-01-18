@@ -17,6 +17,7 @@
 #import "UIColor+GEColor.h"
 #import "UIImageView+WebCache.h"
 #import "ADNavigationController.h"
+#import "WXApi.h"
 
 
 #endif

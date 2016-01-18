@@ -45,6 +45,7 @@
 		8948A8D41C465C2F0004FC2F /* DestinationModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D31C465C2F0004FC2F /* DestinationModel.m */; };
 		8948A8D71C465C720004FC2F /* DestinationChildModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D61C465C720004FC2F /* DestinationChildModel.m */; };
 		8948A8DA1C4663460004FC2F /* GEDestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */; };
+		89567D631C4CC2320023EB53 /* GELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89567D621C4CC2320023EB53 /* GELoginViewController.m */; };
 		89AB60241C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB60231C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m */; };
 		89AB60301C48C1DB00D82DEF /* LXMSinaWeiboHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB60291C48C1DB00D82DEF /* LXMSinaWeiboHelper.m */; };
 		89AB60311C48C1DB00D82DEF /* LXMThirdLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB602B1C48C1DB00D82DEF /* LXMThirdLoginManager.m */; };
@@ -141,6 +142,8 @@
 		8948A8D61C465C720004FC2F /* DestinationChildModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DestinationChildModel.m; sourceTree = "<group>"; };
 		8948A8D81C4663460004FC2F /* GEDestionTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEDestionTableViewCell.h; sourceTree = "<group>"; };
 		8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEDestionTableViewCell.m; sourceTree = "<group>"; };
+		89567D611C4CC2320023EB53 /* GELoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GELoginViewController.h; sourceTree = "<group>"; };
+		89567D621C4CC2320023EB53 /* GELoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GELoginViewController.m; sourceTree = "<group>"; };
 		89AB60221C48BC5900D82DEF /* GEPlanDetailNetworkHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPlanDetailNetworkHelp.h; sourceTree = "<group>"; };
 		89AB60231C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPlanDetailNetworkHelp.m; sourceTree = "<group>"; };
 		89AB60271C48C1DB00D82DEF /* ADNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADNetwork.h; sourceTree = "<group>"; };
@@ -531,6 +534,15 @@
 			name = WorldListVc;
 			sourceTree = "<group>";
 		};
+		89567D601C4CC2100023EB53 /* GELoginVc */ = {
+			isa = PBXGroup;
+			children = (
+				89567D611C4CC2320023EB53 /* GELoginViewController.h */,
+				89567D621C4CC2320023EB53 /* GELoginViewController.m */,
+			);
+			name = GELoginVc;
+			sourceTree = "<group>";
+		};
 		89AB60251C48C18C00D82DEF /* AccountManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -550,6 +562,7 @@
 		89AB60261C48C19D00D82DEF /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				89567D601C4CC2100023EB53 /* GELoginVc */,
 				713CC71A1C44A66300E6916D /* GEUserViewController.h */,
 				713CC71B1C44A66300E6916D /* GEUserViewController.m */,
 			);
@@ -722,6 +735,7 @@
 				713CC7351C44D58900E6916D /* GEPlanOptionTableViewCell.m in Sources */,
 				712550651C2FCA1200764E2A /* TransverseTableView.m in Sources */,
 				716E1E431B7B8E3800BD3E6F /* GEDetailViewController.m in Sources */,
+				89567D631C4CC2320023EB53 /* GELoginViewController.m in Sources */,
 				717C54F51C43E6CB001481BD /* ICSDropShadowView.m in Sources */,
 				715376471C316C9A00EF9ED1 /* ADTranTableView.m in Sources */,
 				71EC06DF1B51E63000E8505C /* AppDelegate.m in Sources */,

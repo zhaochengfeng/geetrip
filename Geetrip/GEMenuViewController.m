@@ -15,6 +15,7 @@
 #import "GEOrderViewController.h"
 #import "GEPayInfoViewController.h"
 #import "GEFriendsViewController.h"
+#import "GELoginViewController.h"
 
 @interface GEMenuViewController ()<UITableViewDataSource,UITableViewDelegate>
 
@@ -123,8 +124,10 @@
     [self.drawer reloadCenterViewControllerUsingBlock:^{
         
         GEHomeViewController *home = [GEHomeViewController defaultHomeManager];
-        GEUserViewController *vc = [[GEUserViewController alloc] init];
-        [home.navigationController pushViewController:vc animated:YES];
+        GELoginViewController *loginVc = [[GELoginViewController alloc] init];
+        [home.navigationController pushViewController:loginVc animated:YES];
+//        GEUserViewController *vc = [[GEUserViewController alloc] init];
+//        [home.navigationController pushViewController:vc animated:YES];
     }];
 }
 
