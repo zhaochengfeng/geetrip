@@ -10,6 +10,7 @@
 #import "GEMenuViewController.h"
 #import "ICSDrawerController.h"
 #import "GEHomeViewController.h"
+#import "LXMThirdLoginManager.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +25,8 @@
     
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     self.window.backgroundColor = [UIColor whiteColor];
+    
+    [[LXMThirdLoginManager sharedManager] setupWithSinaWeiboAppKey:SinaWeiboAppKey SinaWeiboRedirectURI:SinaWeiboRedirectURI WeChatAppKey:WeChatAppKey WeChatAppSecret:WeChatAppSecret QQAppKey:@""];
     
     GEMenuViewController *menu = [[GEMenuViewController alloc] init];
     
@@ -58,6 +61,18 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma mark - 登录跳转相关
+- (BOOL)application:(UIApplication *)application handleOpenURL:(NSURL *)url
+{
+    return [[LXMThirdLoginManager sharedManager] handleOpenUrl:url];
+}
+
+-(BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication
+        annotation:(id)annotation
+{
+    return [[LXMThirdLoginManager sharedManager] handleOpenUrl:url];
 }
 
 @end

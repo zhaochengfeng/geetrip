@@ -46,6 +46,7 @@
 		8948A8D71C465C720004FC2F /* DestinationChildModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D61C465C720004FC2F /* DestinationChildModel.m */; };
 		8948A8DA1C4663460004FC2F /* GEDestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */; };
 		89567D631C4CC2320023EB53 /* GELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89567D621C4CC2320023EB53 /* GELoginViewController.m */; };
+		898F8F1C1C4E120700D2E1E7 /* GEAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 898F8F1B1C4E120700D2E1E7 /* GEAccountManager.m */; };
 		89AB60241C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB60231C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m */; };
 		89AB60301C48C1DB00D82DEF /* LXMSinaWeiboHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB60291C48C1DB00D82DEF /* LXMSinaWeiboHelper.m */; };
 		89AB60311C48C1DB00D82DEF /* LXMThirdLoginManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB602B1C48C1DB00D82DEF /* LXMThirdLoginManager.m */; };
@@ -144,6 +145,9 @@
 		8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEDestionTableViewCell.m; sourceTree = "<group>"; };
 		89567D611C4CC2320023EB53 /* GELoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GELoginViewController.h; sourceTree = "<group>"; };
 		89567D621C4CC2320023EB53 /* GELoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GELoginViewController.m; sourceTree = "<group>"; };
+		898F8F1A1C4E120700D2E1E7 /* GEAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEAccountManager.h; sourceTree = "<group>"; };
+		898F8F1B1C4E120700D2E1E7 /* GEAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEAccountManager.m; sourceTree = "<group>"; };
+		898F8F1D1C4E1CCC00D2E1E7 /* AccountList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountList.h; sourceTree = "<group>"; };
 		89AB60221C48BC5900D82DEF /* GEPlanDetailNetworkHelp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEPlanDetailNetworkHelp.h; sourceTree = "<group>"; };
 		89AB60231C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEPlanDetailNetworkHelp.m; sourceTree = "<group>"; };
 		89AB60271C48C1DB00D82DEF /* ADNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADNetwork.h; sourceTree = "<group>"; };
@@ -205,8 +209,9 @@
 		713CC7161C44A62800E6916D /* AccountCenter */ = {
 			isa = PBXGroup;
 			children = (
+				898F8F191C4E11E000D2E1E7 /* AccountManager */,
 				89AB60261C48C19D00D82DEF /* ViewControllers */,
-				89AB60251C48C18C00D82DEF /* AccountManager */,
+				89AB60251C48C18C00D82DEF /* ThirdPard */,
 			);
 			name = AccountCenter;
 			sourceTree = "<group>";
@@ -387,6 +392,7 @@
 			children = (
 				71E12CCB1B54014B0052DC0A /* PrefixHeader.pch */,
 				71E12CCC1B5404570052DC0A /* DefineMethodHeader.h */,
+				898F8F1D1C4E1CCC00D2E1E7 /* AccountList.h */,
 			);
 			name = ConstFile;
 			sourceTree = "<group>";
@@ -543,7 +549,16 @@
 			name = GELoginVc;
 			sourceTree = "<group>";
 		};
-		89AB60251C48C18C00D82DEF /* AccountManager */ = {
+		898F8F191C4E11E000D2E1E7 /* AccountManager */ = {
+			isa = PBXGroup;
+			children = (
+				898F8F1A1C4E120700D2E1E7 /* GEAccountManager.h */,
+				898F8F1B1C4E120700D2E1E7 /* GEAccountManager.m */,
+			);
+			name = AccountManager;
+			sourceTree = "<group>";
+		};
+		89AB60251C48C18C00D82DEF /* ThirdPard */ = {
 			isa = PBXGroup;
 			children = (
 				89AB60271C48C1DB00D82DEF /* ADNetwork.h */,
@@ -556,7 +571,7 @@
 				89AB602E1C48C1DB00D82DEF /* LXMWeChatHelper.h */,
 				89AB602F1C48C1DB00D82DEF /* LXMWeChatHelper.m */,
 			);
-			name = AccountManager;
+			name = ThirdPard;
 			sourceTree = "<group>";
 		};
 		89AB60261C48C19D00D82DEF /* ViewControllers */ = {
@@ -763,6 +778,7 @@
 				7153764F1C31741C00EF9ED1 /* GEPlanCell.m in Sources */,
 				71914C2C1B524F9700762B8F /* GEHomeViewController.m in Sources */,
 				8948A8D71C465C720004FC2F /* DestinationChildModel.m in Sources */,
+				898F8F1C1C4E120700D2E1E7 /* GEAccountManager.m in Sources */,
 				891A37811C46040A00E2276D /* GEPayInfoViewController.m in Sources */,
 				89AB60321C48C1DB00D82DEF /* LXMThirdLoginResult.m in Sources */,
 				8929B96D1C4778C5008A62D2 /* GEPaymentViewController.m in Sources */,

@@ -35,4 +35,14 @@
     return [UIColor colorWithRed:255/255.0 green:64/255.0 blue:122/255.0 alpha:1];
 }
 
++ (UIColor *)weixinBackColor
+{
+    return [UIColor colorWithRed:57/255.0 green:171/255.0 blue:57/255.0 alpha:1];
+}
+
++ (UIColor *)textColor
+{
+    return [UIColor colorWithRed:65/255.0 green:141/255.0 blue:219/255.0 alpha:1];
+}
+
 @end

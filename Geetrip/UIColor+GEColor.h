@@ -16,4 +16,8 @@
 + (UIColor *)backGrayColor;
 + (UIColor *)geRedColor;
 
++ (UIColor *)weixinBackColor;
+
++ (UIColor *)textColor;
+
 @end
