@@ -19,5 +19,7 @@
 #import "ADNavigationController.h"
 #import "AccountList.h"
 #import "WXApi.h"
+#import "GEBaseNetwork.h"
+#import "NSUserDefaults+UserInfo.h"
 
 #endif

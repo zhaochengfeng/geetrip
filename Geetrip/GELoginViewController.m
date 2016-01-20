@@ -8,6 +8,7 @@
 
 #import "GELoginViewController.h"
 #import "GEAccountManager.h"
+#import "GEUserViewController.h"
 
 @interface GELoginViewController ()<UITextFieldDelegate>
 
@@ -145,7 +146,7 @@
     [GEAccountManager loginWithLoginType:LXMThirdLoginTypeWeChat return:^{
         
     } success:^{
-        
+        [self performSelector:@selector(loginSuccess) withObject:nil afterDelay:0.5];
     } failure:^(NSError *error) {
         
     }];
@@ -159,6 +160,11 @@
 - (void)registerLog
 {
     
+}
+
+- (void)loginSuccess
+{
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)tapedView

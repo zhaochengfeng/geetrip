@@ -33,6 +33,7 @@
 		71EC06EA1B51E63000E8505C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71EC06E81B51E63000E8505C /* LaunchScreen.xib */; };
 		71EC06F61B51E63000E8505C /* GeetripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC06F51B51E63000E8505C /* GeetripTests.m */; };
 		81F512057C7585B51140051A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DB60923B55E4320F73F93C /* libPods.a */; };
+		890597B91C4F51A10093C144 /* GEBaseNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 890597B81C4F51A10093C144 /* GEBaseNetwork.m */; };
 		891A376C1C45F6C600E2276D /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A376B1C45F6C600E2276D /* SearchModel.m */; };
 		891A37751C4603C200E2276D /* GEAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A37741C4603C200E2276D /* GEAboutViewController.m */; };
 		891A37781C4603D300E2276D /* GESettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A37771C4603D300E2276D /* GESettingViewController.m */; };
@@ -46,6 +47,7 @@
 		8948A8D71C465C720004FC2F /* DestinationChildModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D61C465C720004FC2F /* DestinationChildModel.m */; };
 		8948A8DA1C4663460004FC2F /* GEDestionTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */; };
 		89567D631C4CC2320023EB53 /* GELoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 89567D621C4CC2320023EB53 /* GELoginViewController.m */; };
+		89811AFA1C4F6FBC00B735C0 /* NSUserDefaults+UserInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 89811AF91C4F6FBC00B735C0 /* NSUserDefaults+UserInfo.m */; };
 		898F8F1C1C4E120700D2E1E7 /* GEAccountManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 898F8F1B1C4E120700D2E1E7 /* GEAccountManager.m */; };
 		89AB60241C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB60231C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m */; };
 		89AB60301C48C1DB00D82DEF /* LXMSinaWeiboHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 89AB60291C48C1DB00D82DEF /* LXMSinaWeiboHelper.m */; };
@@ -119,6 +121,8 @@
 		71EC06F41B51E63000E8505C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71EC06F51B51E63000E8505C /* GeetripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeetripTests.m; sourceTree = "<group>"; };
 		81DB60923B55E4320F73F93C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		890597B71C4F51A10093C144 /* GEBaseNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEBaseNetwork.h; sourceTree = "<group>"; };
+		890597B81C4F51A10093C144 /* GEBaseNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEBaseNetwork.m; sourceTree = "<group>"; };
 		891A376A1C45F6C600E2276D /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
 		891A376B1C45F6C600E2276D /* SearchModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchModel.m; sourceTree = "<group>"; };
 		891A37731C4603C200E2276D /* GEAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEAboutViewController.h; sourceTree = "<group>"; };
@@ -145,6 +149,8 @@
 		8948A8D91C4663460004FC2F /* GEDestionTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEDestionTableViewCell.m; sourceTree = "<group>"; };
 		89567D611C4CC2320023EB53 /* GELoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GELoginViewController.h; sourceTree = "<group>"; };
 		89567D621C4CC2320023EB53 /* GELoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GELoginViewController.m; sourceTree = "<group>"; };
+		89811AF81C4F6FBC00B735C0 /* NSUserDefaults+UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSUserDefaults+UserInfo.h"; sourceTree = "<group>"; };
+		89811AF91C4F6FBC00B735C0 /* NSUserDefaults+UserInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSUserDefaults+UserInfo.m"; sourceTree = "<group>"; };
 		898F8F1A1C4E120700D2E1E7 /* GEAccountManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEAccountManager.h; sourceTree = "<group>"; };
 		898F8F1B1C4E120700D2E1E7 /* GEAccountManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEAccountManager.m; sourceTree = "<group>"; };
 		898F8F1D1C4E1CCC00D2E1E7 /* AccountList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AccountList.h; sourceTree = "<group>"; };
@@ -237,8 +243,8 @@
 		713CC7251C44C15600E6916D /* Category */ = {
 			isa = PBXGroup;
 			children = (
-				713CC7291C44C23500E6916D /* UIColor+GEColor.h */,
-				713CC72A1C44C23500E6916D /* UIColor+GEColor.m */,
+				89811AF71C4F6F8B00B735C0 /* NSUserDefaults */,
+				89811AF61C4F6F7E00B735C0 /* UIColor */,
 			);
 			name = Category;
 			sourceTree = "<group>";
@@ -420,7 +426,7 @@
 		71EC06D81B51E63000E8505C /* Geetrip */ = {
 			isa = PBXGroup;
 			children = (
-				71914C281B524F4900762B8F /* BaseViewController */,
+				890597B51C4F51630093C144 /* BaseObject */,
 				717C54F61C43E81F001481BD /* MenuViewController */,
 				713CC7151C44A61200E6916D /* ContentViewController */,
 				71914C231B524EC400762B8F /* AppDelegate */,
@@ -458,6 +464,24 @@
 				71EC06F41B51E63000E8505C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		890597B51C4F51630093C144 /* BaseObject */ = {
+			isa = PBXGroup;
+			children = (
+				890597B61C4F51750093C144 /* BaseNetwork */,
+				71914C281B524F4900762B8F /* BaseViewController */,
+			);
+			name = BaseObject;
+			sourceTree = "<group>";
+		};
+		890597B61C4F51750093C144 /* BaseNetwork */ = {
+			isa = PBXGroup;
+			children = (
+				890597B71C4F51A10093C144 /* GEBaseNetwork.h */,
+				890597B81C4F51A10093C144 /* GEBaseNetwork.m */,
+			);
+			name = BaseNetwork;
 			sourceTree = "<group>";
 		};
 		891A376D1C46031A00E2276D /* Friends */ = {
@@ -547,6 +571,24 @@
 				89567D621C4CC2320023EB53 /* GELoginViewController.m */,
 			);
 			name = GELoginVc;
+			sourceTree = "<group>";
+		};
+		89811AF61C4F6F7E00B735C0 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				713CC7291C44C23500E6916D /* UIColor+GEColor.h */,
+				713CC72A1C44C23500E6916D /* UIColor+GEColor.m */,
+			);
+			name = UIColor;
+			sourceTree = "<group>";
+		};
+		89811AF71C4F6F8B00B735C0 /* NSUserDefaults */ = {
+			isa = PBXGroup;
+			children = (
+				89811AF81C4F6FBC00B735C0 /* NSUserDefaults+UserInfo.h */,
+				89811AF91C4F6FBC00B735C0 /* NSUserDefaults+UserInfo.m */,
+			);
+			name = NSUserDefaults;
 			sourceTree = "<group>";
 		};
 		898F8F191C4E11E000D2E1E7 /* AccountManager */ = {
@@ -756,6 +798,7 @@
 				71EC06DF1B51E63000E8505C /* AppDelegate.m in Sources */,
 				712550661C2FCA1200764E2A /* ADImageViewCell.m in Sources */,
 				891A377E1C4603F900E2276D /* GEOrderViewController.m in Sources */,
+				890597B91C4F51A10093C144 /* GEBaseNetwork.m in Sources */,
 				717C54F91C43E850001481BD /* GEMenuViewController.m in Sources */,
 				713CC7321C44D31B00E6916D /* GEPlanOptionModel.m in Sources */,
 				71443ECF1BD34C8A00F6D294 /* GEHomeNetWorkHelp.m in Sources */,
@@ -766,6 +809,7 @@
 				71963A8F1BD381AA00BBD364 /* PlanModel.m in Sources */,
 				891A37781C4603D300E2276D /* GESettingViewController.m in Sources */,
 				891A377B1C4603E800E2276D /* GESpecialViewController.m in Sources */,
+				89811AFA1C4F6FBC00B735C0 /* NSUserDefaults+UserInfo.m in Sources */,
 				7153764B1C316D8200EF9ED1 /* ADTableViewCell.m in Sources */,
 				713CC72B1C44C23500E6916D /* UIColor+GEColor.m in Sources */,
 				89AB60311C48C1DB00D82DEF /* LXMThirdLoginManager.m in Sources */,

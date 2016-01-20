@@ -15,4 +15,6 @@
 
 + (GEHomeViewController *)defaultHomeManager;
 
+- (void)cancelSarch;
+
 @end

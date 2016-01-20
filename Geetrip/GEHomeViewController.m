@@ -399,7 +399,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+{    
     [self.mySearchBar resignFirstResponder];
     if (tableView.tag == SearchTableViewTag) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];

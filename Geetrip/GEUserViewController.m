@@ -17,7 +17,20 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-    self.title = @"登录";
+    self.title = @"用户信息";
+    
+    UIButton *logoutButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 100, 40)];
+    logoutButton.center = CGPointMake(SCREEN_WIDTH/2.0, SCREEN_HEIGHT/2.0);
+    logoutButton.backgroundColor = [UIColor redColor];
+    [logoutButton setTitle:@"退出" forState:UIControlStateNormal];
+    [logoutButton addTarget:self action:@selector(logout) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:logoutButton];
+}
+
+- (void)logout
+{
+    [NSUserDefaults standardUserDefaults].userName = nil;
+    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

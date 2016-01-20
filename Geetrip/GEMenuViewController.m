@@ -46,6 +46,18 @@
     [self loadHeaderSubViews];
 }
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    NSLog(@"打开菜单");
+    
+    NSString *userName = [NSUserDefaults standardUserDefaults].userName;
+    if (userName == nil) {
+        userName = @"未登录";
+    }
+    self.nameLabel.text = userName;
+}
+
 - (void)loadHeaderSubViews
 {
     CGFloat headerHeight = self.tableHeaderView.frame.size.height - 20;
@@ -60,10 +72,9 @@
     self.iconImageView.image = [UIImage imageNamed:@"me"];
     [self.tableHeaderView addSubview:self.iconImageView];
     
-    UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15 + iconWidth + 10, 20, SCREEN_WIDTH - 40 - iconWidth, self.tableHeaderView.frame.size.height - 20)];
-    nameLabel.font = [UIFont systemFontOfSize:15];
-    nameLabel.text = @"未登录";
-    [self.tableHeaderView addSubview:nameLabel];
+    self.nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(15 + iconWidth + 10, 20, SCREEN_WIDTH - 40 - iconWidth, self.tableHeaderView.frame.size.height - 20)];
+    self.nameLabel.font = [UIFont systemFontOfSize:15];
+    [self.tableHeaderView addSubview:self.nameLabel];
     
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, self.tableHeaderView.frame.size.height - 0.5, SCREEN_WIDTH, 0.5)];
     lineView.backgroundColor = [UIColor separator_gray_line_color];
@@ -92,7 +103,11 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
     GEHomeViewController *homeVc = [GEHomeViewController defaultHomeManager];
+    [homeVc cancelSarch];
+    
     [self.drawer reloadCenterViewControllerUsingBlock:^{
         
         if (indexPath.row == 0) {
@@ -122,12 +137,18 @@
 - (void)jumpToUser
 {
     [self.drawer reloadCenterViewControllerUsingBlock:^{
-        
-        GEHomeViewController *home = [GEHomeViewController defaultHomeManager];
-        GELoginViewController *loginVc = [[GELoginViewController alloc] init];
-        [home.navigationController pushViewController:loginVc animated:YES];
-//        GEUserViewController *vc = [[GEUserViewController alloc] init];
-//        [home.navigationController pushViewController:vc animated:YES];
+        NSString *userName = [NSUserDefaults standardUserDefaults].userName;
+        if (userName == nil) {
+            GEHomeViewController *home = [GEHomeViewController defaultHomeManager];
+            GELoginViewController *loginVc = [[GELoginViewController alloc] init];
+            [home.navigationController pushViewController:loginVc animated:YES];
+        }else{
+            GEHomeViewController *home = [GEHomeViewController defaultHomeManager];
+         
+            GEUserViewController *vc = [[GEUserViewController alloc] init];
+            [home.navigationController pushViewController:vc animated:YES];
+
+        }
     }];
 }
 
