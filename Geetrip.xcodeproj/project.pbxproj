@@ -33,6 +33,8 @@
 		71EC06EA1B51E63000E8505C /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 71EC06E81B51E63000E8505C /* LaunchScreen.xib */; };
 		71EC06F61B51E63000E8505C /* GeetripTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC06F51B51E63000E8505C /* GeetripTests.m */; };
 		81F512057C7585B51140051A /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DB60923B55E4320F73F93C /* libPods.a */; };
+		890191801C51DD86007E65EE /* GENotiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8901917F1C51DD86007E65EE /* GENotiViewController.m */; };
+		890191841C51E043007E65EE /* GEAllThemVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 890191831C51E043007E65EE /* GEAllThemVc.m */; };
 		890597B91C4F51A10093C144 /* GEBaseNetwork.m in Sources */ = {isa = PBXBuildFile; fileRef = 890597B81C4F51A10093C144 /* GEBaseNetwork.m */; };
 		891A376C1C45F6C600E2276D /* SearchModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A376B1C45F6C600E2276D /* SearchModel.m */; };
 		891A37751C4603C200E2276D /* GEAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 891A37741C4603C200E2276D /* GEAboutViewController.m */; };
@@ -121,6 +123,10 @@
 		71EC06F41B51E63000E8505C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		71EC06F51B51E63000E8505C /* GeetripTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GeetripTests.m; sourceTree = "<group>"; };
 		81DB60923B55E4320F73F93C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		8901917E1C51DD86007E65EE /* GENotiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GENotiViewController.h; sourceTree = "<group>"; };
+		8901917F1C51DD86007E65EE /* GENotiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GENotiViewController.m; sourceTree = "<group>"; };
+		890191821C51E043007E65EE /* GEAllThemVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEAllThemVc.h; sourceTree = "<group>"; };
+		890191831C51E043007E65EE /* GEAllThemVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEAllThemVc.m; sourceTree = "<group>"; };
 		890597B71C4F51A10093C144 /* GEBaseNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEBaseNetwork.h; sourceTree = "<group>"; };
 		890597B81C4F51A10093C144 /* GEBaseNetwork.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEBaseNetwork.m; sourceTree = "<group>"; };
 		891A376A1C45F6C600E2276D /* SearchModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchModel.h; sourceTree = "<group>"; };
@@ -198,6 +204,8 @@
 		713CC7151C44A61200E6916D /* ContentViewController */ = {
 			isa = PBXGroup;
 			children = (
+				890191811C51E01A007E65EE /* AllThemeVC */,
+				8901917A1C51DD14007E65EE /* NotiViewController */,
 				8948A8CE1C4659110004FC2F /* WorldListVc */,
 				891A37721C4603A400E2276D /* AboutUs */,
 				891A37711C46039A00E2276D /* Setting */,
@@ -464,6 +472,24 @@
 				71EC06F41B51E63000E8505C /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8901917A1C51DD14007E65EE /* NotiViewController */ = {
+			isa = PBXGroup;
+			children = (
+				8901917E1C51DD86007E65EE /* GENotiViewController.h */,
+				8901917F1C51DD86007E65EE /* GENotiViewController.m */,
+			);
+			name = NotiViewController;
+			sourceTree = "<group>";
+		};
+		890191811C51E01A007E65EE /* AllThemeVC */ = {
+			isa = PBXGroup;
+			children = (
+				890191821C51E043007E65EE /* GEAllThemVc.h */,
+				890191831C51E043007E65EE /* GEAllThemVc.m */,
+			);
+			name = AllThemeVC;
 			sourceTree = "<group>";
 		};
 		890597B51C4F51630093C144 /* BaseObject */ = {
@@ -808,6 +834,7 @@
 				71EC06DC1B51E63000E8505C /* main.m in Sources */,
 				71963A8F1BD381AA00BBD364 /* PlanModel.m in Sources */,
 				891A37781C4603D300E2276D /* GESettingViewController.m in Sources */,
+				890191801C51DD86007E65EE /* GENotiViewController.m in Sources */,
 				891A377B1C4603E800E2276D /* GESpecialViewController.m in Sources */,
 				89811AFA1C4F6FBC00B735C0 /* NSUserDefaults+UserInfo.m in Sources */,
 				7153764B1C316D8200EF9ED1 /* ADTableViewCell.m in Sources */,
@@ -818,6 +845,7 @@
 				71914C271B524F0800762B8F /* GEBaseViewController.m in Sources */,
 				891A376C1C45F6C600E2276D /* SearchModel.m in Sources */,
 				8948A8DA1C4663460004FC2F /* GEDestionTableViewCell.m in Sources */,
+				890191841C51E043007E65EE /* GEAllThemVc.m in Sources */,
 				891A37841C46041C00E2276D /* GEFriendsViewController.m in Sources */,
 				7153764F1C31741C00EF9ED1 /* GEPlanCell.m in Sources */,
 				71914C2C1B524F9700762B8F /* GEHomeViewController.m in Sources */,

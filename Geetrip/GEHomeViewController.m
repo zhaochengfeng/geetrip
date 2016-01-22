@@ -15,10 +15,12 @@
 #import "GEPlanCell.h"
 #import "SearchModel.h"
 #import "GEWorldListViewController.h"
+#import "GENotiViewController.h"
 
 #define SearchTableViewTag 100
 #define PlanTableViewTag 200
 #define ThemeTableViewTag 300
+#define NavItemTag 400
 
 @interface GEHomeViewController () <ADRecordDelegate,UIGestureRecognizerDelegate,UITableViewDataSource,UITableViewDelegate>
 
@@ -40,7 +42,7 @@
 @property (nonatomic,strong) UILabel *noPlanLabel;
 
 //导航按钮
-@property (nonatomic,strong) UIBarButtonItem *left,*right1,*right2,*right3;
+@property (nonatomic,strong) NSMutableArray *navBarItmArray;
 
 @end
 
@@ -128,54 +130,78 @@
     _mySearchBar.placeholder = @"搜索目的地，主题，酒店品牌";
     self.navigationItem.titleView = _mySearchBar;
     
-    UIButton *leftButton = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 30, 44)];
-    leftButton.backgroundColor = [UIColor clearColor];
-    [leftButton setImage:[UIImage imageNamed:@"world"] forState:UIControlStateNormal];
-    [leftButton addTarget:self action:@selector(openWorldList) forControlEvents:UIControlEventTouchUpInside];
-    leftButton.titleLabel.font = [UIFont systemFontOfSize:14];
-
-    [leftButton setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    self.left = [[UIBarButtonItem alloc] initWithCustomView:leftButton];
-    
-    UIButton *rightbutton1 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 44)];
-    rightbutton1.backgroundColor = [UIColor clearColor];
-    [rightbutton1 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    [rightbutton1 setImage:[UIImage imageNamed:@"nofitication"] forState:UIControlStateNormal];
-    rightbutton1.titleLabel.font = [UIFont systemFontOfSize:14];
-
-    self.right1 = [[UIBarButtonItem alloc] initWithCustomView:rightbutton1];
-    
-    UIButton *right = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 25, 44)];
-    right.backgroundColor = [UIColor clearColor];
-    [right setImage:[UIImage imageNamed:@"list"] forState:UIControlStateNormal];
-    [right setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    right.titleLabel.font = [UIFont systemFontOfSize:14];
-    self.right2 = [[UIBarButtonItem alloc] initWithCustomView:right];
-    
-    UIButton *right3 = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, 44, 44)];
-    right3.backgroundColor = [UIColor clearColor];
-    [right3 setTitle:@"取消" forState:UIControlStateNormal];
-    [right3 addTarget:self action:@selector(cancelSarch) forControlEvents:UIControlEventTouchUpInside];
-    [right3 setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    right3.titleLabel.font = [UIFont systemFontOfSize:14];
-    self.right3 = [[UIBarButtonItem alloc] initWithCustomView:right3];
+    NSArray *imageArray = [NSArray arrayWithObjects:@"menu", @"nofitication", @"list", @"world", @"", nil];
+    self.navBarItmArray = [NSMutableArray array];
+    CGFloat width = 25;
+    for (int i = 0; i < imageArray.count; i++) {
+        NSString *imgName = [imageArray objectAtIndex:i];
+        if (imgName.length == 0) {
+            width = 44;
+        }
+        
+        UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, 0, width, 44)];
+        if (imgName.length != 0) {
+            [button setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
+        }else{
+            [button setTitle:@"取消" forState:UIControlStateNormal];
+            button.titleLabel.font = [UIFont systemFontOfSize:14];
+        }
+        button.tag = NavItemTag + i;
+        [button addTarget:self action:@selector(navItemClicked:) forControlEvents:UIControlEventTouchUpInside];
+        UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:button];
+        
+        [self.navBarItmArray addObject:item];
+    }
     
     [self setDefaultNavBar];
+}
+
+- (void)navItemClicked:(UIButton *)button
+{
+    switch (button.tag) {
+        case NavItemTag:
+            [self.drawer open];
+            break;
+        case NavItemTag + 1:
+        {
+            GENotiViewController *notiVc = [[GENotiViewController alloc] init];
+            [self.navigationController pushViewController:notiVc animated:YES];
+        }
+            break;
+        case NavItemTag + 2:
+        {
+            
+        }
+            break;
+        case NavItemTag + 3:
+        {
+            GEWorldListViewController *listVc = [[GEWorldListViewController alloc] init];
+            [self.navigationController pushViewController:listVc animated:YES];
+        }
+            break;
+        case NavItemTag + 4:
+        {
+            [self cancelSarch];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)setDefaultNavBar
 {
     [UIView animateWithDuration:0.3 animations:^{
         self.navigationItem.rightBarButtonItem = nil;
-        self.navigationItem.leftBarButtonItem = self.left;
-        self.navigationItem.rightBarButtonItems  = [NSArray arrayWithObjects:self.right1,self.right2, nil];
+        self.navigationItem.leftBarButtonItem = [self.navBarItmArray firstObject];
+        self.navigationItem.rightBarButtonItems  = [NSArray arrayWithObjects:self.navBarItmArray[1],self.navBarItmArray[2],self.navBarItmArray[3], nil];
     }];
 }
 
 - (void)setSearchNavBar
 {
     self.navigationItem.rightBarButtonItems = nil;
-    self.navigationItem.rightBarButtonItem  = self.right3;
+    self.navigationItem.rightBarButtonItem  = [self.navBarItmArray lastObject];
 
     [UIView animateWithDuration:0.3 animations:^{
         self.navigationItem.leftBarButtonItem = nil;
@@ -242,26 +268,23 @@
     UIView *openMenuView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, SCREEN_HEIGHT)];
     [self.view addSubview:openMenuView];
     
-    self.themeTableView = [[TransverseTableView alloc] initWithFrame:CGRectMake(Cell_width, SCREEN_HEIGHT - Cell_height, SCREEN_WIDTH - Cell_width, Cell_height)];
+    self.themeTableView = [[TransverseTableView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - Cell_height, SCREEN_WIDTH - Cell_width, Cell_height)];
     self.themeTableView.tag = ThemeTableViewTag;
     self.themeTableView.recordDelegate = self;
     [self.view addSubview:self.themeTableView];
     
-    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - Cell_height, Cell_width, Cell_height)];
+    UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - Cell_width, SCREEN_HEIGHT - Cell_height, Cell_width, Cell_height)];
     [self.view addSubview:button];
     button.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 30, 0);
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0.5, Cell_height)];
     lineView.backgroundColor = [UIColor lightGrayColor];
     [button addSubview:lineView];
     
-    [button setImage:[UIImage imageNamed:@"me"] forState:UIControlStateNormal];
     UILabel *nameLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, button.frame.size.height - 30, button.frame.size.width, 20)];
     nameLabel.textAlignment = NSTextAlignmentCenter;
     nameLabel.font = [UIFont systemFontOfSize:13];
-    nameLabel.text = @"我的";
+    nameLabel.text = @"全部";
     [button addSubview:nameLabel];
-    
-    [button addTarget:self.drawer action:@selector(open) forControlEvents:UIControlEventTouchUpInside];
 }
 
 - (void)loadSearchTableView
@@ -411,13 +434,6 @@
         detail.myPlanModel = model;
         [self.navigationController pushViewController:detail animated:YES];
     }
-}
-
-//左导航点击
-- (void)openWorldList
-{
-    GEWorldListViewController *listVc = [[GEWorldListViewController alloc] init];
-    [self.navigationController pushViewController:listVc animated:YES];
 }
 
 #pragma mark ----------------ICSDrawerControllerPresenting--------------------
