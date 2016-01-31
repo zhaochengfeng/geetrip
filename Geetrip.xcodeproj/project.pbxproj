@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		71180D0C1C5CFC2600A79DDF /* GEGoNowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 71180D0B1C5CFC2600A79DDF /* GEGoNowView.m */; };
+		71180D121C5D0C8B00A79DDF /* GEAllThemeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 71180D111C5D0C8B00A79DDF /* GEAllThemeVC.m */; };
 		712550651C2FCA1200764E2A /* TransverseTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 712550621C2FCA1200764E2A /* TransverseTableView.m */; };
 		712550661C2FCA1200764E2A /* ADImageViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 712550641C2FCA1200764E2A /* ADImageViewCell.m */; };
 		713CC71C1C44A66300E6916D /* GEUserViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 713CC71B1C44A66300E6916D /* GEUserViewController.m */; };
@@ -22,6 +24,7 @@
 		717C54F51C43E6CB001481BD /* ICSDropShadowView.m in Sources */ = {isa = PBXBuildFile; fileRef = 717C54F31C43E6CB001481BD /* ICSDropShadowView.m */; };
 		717C54F91C43E850001481BD /* GEMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717C54F81C43E850001481BD /* GEMenuViewController.m */; };
 		717C54FC1C43EA7B001481BD /* ADNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 717C54FB1C43EA7B001481BD /* ADNavigationController.m */; };
+		718505D01C5CB970002C05C9 /* GENationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 718505CF1C5CB970002C05C9 /* GENationView.m */; };
 		71914C271B524F0800762B8F /* GEBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71914C261B524F0800762B8F /* GEBaseViewController.m */; };
 		71914C2C1B524F9700762B8F /* GEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71914C2B1B524F9700762B8F /* GEHomeViewController.m */; };
 		71963A8B1BD3717E00BBD364 /* ActListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71963A8A1BD3717E00BBD364 /* ActListModel.m */; };
@@ -71,6 +74,10 @@
 /* Begin PBXFileReference section */
 		279E84D304BF291A0332DE1C /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		55F78F825F970E01DDCDF04C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		71180D0A1C5CFC2600A79DDF /* GEGoNowView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEGoNowView.h; sourceTree = "<group>"; };
+		71180D0B1C5CFC2600A79DDF /* GEGoNowView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEGoNowView.m; sourceTree = "<group>"; };
+		71180D101C5D0C8B00A79DDF /* GEAllThemeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEAllThemeVC.h; sourceTree = "<group>"; };
+		71180D111C5D0C8B00A79DDF /* GEAllThemeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEAllThemeVC.m; sourceTree = "<group>"; };
 		712550611C2FCA1200764E2A /* TransverseTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TransverseTableView.h; sourceTree = "<group>"; };
 		712550621C2FCA1200764E2A /* TransverseTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TransverseTableView.m; sourceTree = "<group>"; };
 		712550631C2FCA1200764E2A /* ADImageViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADImageViewCell.h; sourceTree = "<group>"; };
@@ -101,6 +108,8 @@
 		717C54F81C43E850001481BD /* GEMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEMenuViewController.m; sourceTree = "<group>"; };
 		717C54FA1C43EA7B001481BD /* ADNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ADNavigationController.h; sourceTree = "<group>"; };
 		717C54FB1C43EA7B001481BD /* ADNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ADNavigationController.m; sourceTree = "<group>"; };
+		718505CE1C5CB970002C05C9 /* GENationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GENationView.h; sourceTree = "<group>"; };
+		718505CF1C5CB970002C05C9 /* GENationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GENationView.m; sourceTree = "<group>"; };
 		71914C251B524F0800762B8F /* GEBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEBaseViewController.h; sourceTree = "<group>"; };
 		71914C261B524F0800762B8F /* GEBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEBaseViewController.m; sourceTree = "<group>"; };
 		71914C2A1B524F9700762B8F /* GEHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEHomeViewController.h; sourceTree = "<group>"; };
@@ -325,6 +334,12 @@
 			children = (
 				71914C2A1B524F9700762B8F /* GEHomeViewController.h */,
 				71914C2B1B524F9700762B8F /* GEHomeViewController.m */,
+				718505CE1C5CB970002C05C9 /* GENationView.h */,
+				718505CF1C5CB970002C05C9 /* GENationView.m */,
+				71180D0A1C5CFC2600A79DDF /* GEGoNowView.h */,
+				71180D0B1C5CFC2600A79DDF /* GEGoNowView.m */,
+				71180D101C5D0C8B00A79DDF /* GEAllThemeVC.h */,
+				71180D111C5D0C8B00A79DDF /* GEAllThemeVC.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -814,6 +829,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8948A8D11C4659410004FC2F /* GEWorldListViewController.m in Sources */,
+				71180D121C5D0C8B00A79DDF /* GEAllThemeVC.m in Sources */,
 				89AB60241C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m in Sources */,
 				713CC7351C44D58900E6916D /* GEPlanOptionTableViewCell.m in Sources */,
 				712550651C2FCA1200764E2A /* TransverseTableView.m in Sources */,
@@ -834,6 +850,7 @@
 				71EC06DC1B51E63000E8505C /* main.m in Sources */,
 				71963A8F1BD381AA00BBD364 /* PlanModel.m in Sources */,
 				891A37781C4603D300E2276D /* GESettingViewController.m in Sources */,
+				71180D0C1C5CFC2600A79DDF /* GEGoNowView.m in Sources */,
 				890191801C51DD86007E65EE /* GENotiViewController.m in Sources */,
 				891A377B1C4603E800E2276D /* GESpecialViewController.m in Sources */,
 				89811AFA1C4F6FBC00B735C0 /* NSUserDefaults+UserInfo.m in Sources */,
@@ -845,6 +862,7 @@
 				71914C271B524F0800762B8F /* GEBaseViewController.m in Sources */,
 				891A376C1C45F6C600E2276D /* SearchModel.m in Sources */,
 				8948A8DA1C4663460004FC2F /* GEDestionTableViewCell.m in Sources */,
+				718505D01C5CB970002C05C9 /* GENationView.m in Sources */,
 				890191841C51E043007E65EE /* GEAllThemVc.m in Sources */,
 				891A37841C46041C00E2276D /* GEFriendsViewController.m in Sources */,
 				7153764F1C31741C00EF9ED1 /* GEPlanCell.m in Sources */,
@@ -988,6 +1006,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer: Siwei Huang (7T847263QB)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Siwei Huang (7T847263QB)";
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_BITCODE = NO;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/Geetrip/PrefixHeader.pch";
 				HEADER_SEARCH_PATHS = (

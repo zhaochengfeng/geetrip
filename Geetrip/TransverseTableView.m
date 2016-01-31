@@ -36,6 +36,9 @@
 //    NSLog(@"%@",imageArray);
     [self.myTableView setContentOffset:CGPointMake(0, 0)];
     _imageArray = imageArray;
+//    NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
+//    [self.themeTableView.myTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+
     [self.myTableView reloadData];
 }
 
@@ -65,7 +68,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-//    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
     ActListModel *model = [self.imageArray objectAtIndex:indexPath.row];
     if ([self.recordDelegate respondsToSelector:@selector(clickedRecordWithModel:)]) {
         [self.recordDelegate clickedRecordWithModel:model];

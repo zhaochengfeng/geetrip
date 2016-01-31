@@ -16,6 +16,9 @@
 #import "SearchModel.h"
 #import "GEWorldListViewController.h"
 #import "GENotiViewController.h"
+#import "GENationView.h"
+#import "GEGoNowView.h"
+#import "GEAllThemeVC.h"
 
 #define SearchTableViewTag 100
 #define PlanTableViewTag 200
@@ -30,6 +33,10 @@
 @property (nonatomic,strong) NSMutableArray *actListDataArray;
 @property (nonatomic,strong) NSMutableArray *planListArray;
 @property (nonatomic,strong) NSMutableArray *searchDataArray;
+@property (nonatomic,strong) NSMutableArray *nationArray;
+@property (nonatomic,strong) UIPageControl *myPageControl;
+@property (nonatomic,strong) UIImageView *mapImageView;
+@property (nonatomic,strong) GEGoNowView *goNowView;
 
 //当前正在请求的url
 @property (nonatomic,strong) NSURLSessionDataTask *currentTask;
@@ -64,6 +71,7 @@
     self.actListDataArray = [NSMutableArray array];
     self.planListArray = [NSMutableArray array];
     self.searchDataArray = [NSMutableArray array];
+    self.nationArray = [NSMutableArray array];
     
     self.automaticallyAdjustsScrollViewInsets = NO;
     
@@ -83,9 +91,7 @@
             [_actListDataArray addObject:model];
         }
         self.themeTableView.imageArray = _actListDataArray;
-        if (self.actListDataArray.count != 0) {
-            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:0 inSection:0];
-            [self.themeTableView.myTableView selectRowAtIndexPath:indexPath animated:YES scrollPosition:UITableViewScrollPositionTop];
+        if (self.actListDataArray.count != 0) {            
             ActListModel *firstModel = self.actListDataArray.firstObject;
             [self getPlanWithTourId:firstModel.tourId];
         }
@@ -99,6 +105,7 @@
     [self.currentTask cancel];
 
     self.currentTask = [GEHomeNetWorkHelp getPlanWithTourId:tourId success:^(id responseObject) {
+        NSLog(@"%@",responseObject);
         NSArray *dataArray = [responseObject objectForKey:@"data"];
         [_planListArray removeAllObjects];
 
@@ -111,12 +118,85 @@
             
         }
         
-        [self.myTableView reloadData];
-        
+        [self reloadPlanTable];
     } failure:^(NSError *error) {
         [_planListArray removeAllObjects];
-        [self.myTableView reloadData];
+        [self reloadPlanTable];
+    }];
+}
 
+- (void)reloadPlanTable
+{
+    self.myPageControl.numberOfPages = self.planListArray.count;
+    if (self.planListArray.count > 0) {
+        self.myPageControl.currentPage = 0;
+    }
+    [self.myTableView reloadData];
+    self.myTableView.contentOffset = CGPointMake(0, 0);
+    
+    for (UIView *view in self.mapImageView.subviews) {
+        
+        [view removeFromSuperview];
+    }
+    
+    for (int i = 0; i < self.planListArray.count ; i++) {
+        GENationView *nationView1;
+        GENationView *nationView2;
+        GENationView *nationView3;
+        
+        PlanModel *model = [self.planListArray objectAtIndex:i];
+        
+        if (i * 3 < self.nationArray.count) {
+            nationView1 = [self.nationArray objectAtIndex:3*i];
+            nationView2 = [self.nationArray objectAtIndex:3*i+1];
+            nationView3 = [self.nationArray objectAtIndex:3*i+2];
+            
+        }else{
+            CGFloat floatWidth = 5;
+            nationView1 = [[GENationView alloc] initWithFrame:CGRectMake(0, 0, floatWidth, floatWidth)];
+            nationView2 = [[GENationView alloc] initWithFrame:CGRectMake(0, 0, floatWidth, floatWidth)];
+            nationView3 = [[GENationView alloc] initWithFrame:CGRectMake(0, 0, floatWidth, floatWidth)];
+
+            [self.nationArray addObject:nationView1];
+            [self.nationArray addObject:nationView2];
+            [self.nationArray addObject:nationView3];
+
+        }
+
+        CGFloat width = self.mapImageView.frame.size.width/3.0;
+        nationView1.center = CGPointMake(model.posx.floatValue*width, model.posy.floatValue*self.mapImageView.frame.size.height);
+        nationView2.center = CGPointMake(model.posx.floatValue*width + width, model.posy.floatValue*self.mapImageView.frame.size.height);
+        nationView3.center = CGPointMake(model.posx.floatValue*width + width *2, model.posy.floatValue*self.mapImageView.frame.size.height);
+        
+        [self.mapImageView addSubview:nationView1];
+        [self.mapImageView addSubview:nationView2];
+        [self.mapImageView addSubview:nationView3];
+    }
+    
+    [self selectPlanAtIndex:0];
+
+}
+
+- (void)selectPlanAtIndex:(NSInteger)index
+{
+    if (index >= self.planListArray.count || self.planListArray.count == 0) {
+        self.goNowView.hidden = YES;
+        return;
+    }
+    
+    self.goNowView.hidden = NO;
+    self.goNowView.tag = index;
+    PlanModel *model = [self.planListArray objectAtIndex:index];
+    CGFloat width = self.mapImageView.frame.size.width/3.0;
+    CGFloat posX = model.posx.floatValue*width + width;
+    CGFloat posy = model.posy.floatValue*self.mapImageView.frame.size.height + self.mapImageView.frame.origin.y;
+    CGPoint center = CGPointMake(posX, posy);
+    
+    self.goNowView.nationFlag = model.logo;
+    
+    [UIView animateWithDuration:0.3 animations:^{
+        self.goNowView.center = CGPointMake(center.x - 2, center.y - 22);
+        self.mapScrollView.contentOffset = CGPointMake(posX - width/2.0, 0);
     }];
 }
 
@@ -144,6 +224,7 @@
             [button setImage:[UIImage imageNamed:imgName] forState:UIControlStateNormal];
         }else{
             [button setTitle:@"取消" forState:UIControlStateNormal];
+            [button setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
             button.titleLabel.font = [UIFont systemFontOfSize:14];
         }
         button.tag = NavItemTag + i;
@@ -206,6 +287,7 @@
     [UIView animateWithDuration:0.3 animations:^{
         self.navigationItem.leftBarButtonItem = nil;
     } completion:^(BOOL finished) {
+        
     }];
 }
 
@@ -220,6 +302,7 @@
     [self loadTableView];
     [self loadMapView];
     [self loadThemeTableView];
+    [self loadPageControl];
 }
 
 - (void)loadTableView
@@ -246,11 +329,21 @@
     [self.view addSubview:self.noPlanLabel];
 }
 
+- (void)loadPageControl
+{
+    self.myPageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
+    self.myPageControl.userInteractionEnabled = NO;
+    self.myPageControl.center = CGPointMake(SCREEN_WIDTH/2.0, self.myTableView.center.y + self.myTableView.frame.size.height/2.0 - 10);
+    self.myPageControl.pageIndicatorTintColor = [UIColor backGrayColor];
+    self.myPageControl.currentPageIndicatorTintColor = [UIColor grayColor];
+    [self.view addSubview:self.myPageControl];
+}
+
 - (void)loadMapView
 {
     UIImage *img = [UIImage imageNamed:@"worldmap"];
     CGFloat mapHeight = SCREEN_WIDTH * 3.0 * img.size.height / img.size.width;
-    self.mapScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - mapHeight - Cell_height - 20, SCREEN_WIDTH, mapHeight)];
+    self.mapScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - mapHeight - Cell_height - 60, SCREEN_WIDTH, mapHeight + 40)];
     self.mapScrollView.contentSize = CGSizeMake(SCREEN_WIDTH * 3.0, mapHeight);
     self.mapScrollView.backgroundColor = [UIColor whiteColor];
     self.mapScrollView.showsHorizontalScrollIndicator = NO;
@@ -258,9 +351,16 @@
     self.mapScrollView.delegate = self;
     [self.view addSubview:self.mapScrollView];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH * 3.0, mapHeight)];
-    imageView.image = img;
-    [self.mapScrollView addSubview:imageView];
+    _mapImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH * 3.0, mapHeight)];
+    _mapImageView.image = img;
+    [self.mapScrollView addSubview:_mapImageView];
+
+    self.goNowView = [[GEGoNowView alloc] initWithFrame:CGRectMake(0, 0, 136, 40)];
+    self.goNowView.hidden = YES;
+    [self.mapScrollView addSubview:self.goNowView];
+    
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goToDetailView:)];
+    [self.goNowView addGestureRecognizer:tap];
 }
 
 - (void)loadThemeTableView
@@ -274,6 +374,7 @@
     [self.view addSubview:self.themeTableView];
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - Cell_width, SCREEN_HEIGHT - Cell_height, Cell_width, Cell_height)];
+    [button addTarget:self action:@selector(openAllTheme) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:button];
     button.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 30, 0);
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0.5, Cell_height)];
@@ -298,6 +399,15 @@
     }
     self.searchTableView.alpha = 1;
     [self.view bringSubviewToFront:self.searchTableView];
+}
+
+#pragma 用户交互
+- (void)openAllTheme
+{
+    GEAllThemeVC *themeVc = [[GEAllThemeVC alloc] init];
+    ADNavigationController *nc = [[ADNavigationController alloc] initWithRootViewController:themeVc];
+    
+    [self presentViewController:nc animated:YES completion:nil];
 }
 
 #pragma mark - 搜索框的代理
@@ -436,6 +546,15 @@
     }
 }
 
+- (void)goToDetailView:(UITapGestureRecognizer *)tap
+{
+    NSInteger index = self.goNowView.tag;
+    PlanModel *model = [self.planListArray objectAtIndex:index];
+    GEDetailViewController *detail = [[GEDetailViewController alloc] init];
+    detail.myPlanModel = model;
+    [self.navigationController pushViewController:detail animated:YES];
+}
+
 #pragma mark ----------------ICSDrawerControllerPresenting--------------------
 - (void)drawerControllerWillOpen:(ICSDrawerController *)drawerController{
     self.view.userInteractionEnabled = NO;
@@ -447,9 +566,22 @@
     self.navigationController.navigationBar.userInteractionEnabled = YES;
 }
 
+#pragma scrollView 代理
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self.mySearchBar resignFirstResponder];
+}
+
+- (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
+{
+    if (scrollView.tag == PlanTableViewTag) {
+        int index = fabs(scrollView.contentOffset.y / scrollView.frame.size.width);
+        
+        self.myPageControl.currentPage = index;
+        [self selectPlanAtIndex:index];
+    }
+    
+
 }
 
 - (void)didReceiveMemoryWarning {

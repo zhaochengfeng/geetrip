@@ -39,13 +39,11 @@
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(width, startPos, SCREEN_WIDTH - 2 *width, 20)];
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.titleLabel.font = [UIFont systemFontOfSize:15];
-    self.titleLabel.text = @"足球";
     [self.contentView addSubview:self.titleLabel];
     
     startPos += 60;
     
     self.planImgView = [[UIImageView alloc] initWithFrame:CGRectMake(width, startPos, SCREEN_WIDTH - 2 * width, 150)];
-//    self.planImgView.backgroundColor = [UIColor lightGrayColor];
     self.planImgView.contentMode = UIViewContentModeScaleAspectFill;
     self.planImgView.clipsToBounds = YES;
     [self.contentView addSubview:self.planImgView];
@@ -81,9 +79,7 @@
     self.dateLabel.font = [UIFont systemFontOfSize:13];
     self.dateLabel.textColor = [UIColor grayColor];
     [self.contentView addSubview:self.dateLabel];
-    
 }
-
 
 - (void)setModel:(PlanModel *)model
 {
@@ -94,13 +90,11 @@
     self.noteLabel.text = model.detail;
     self.dateLabel.text = model.intro;
     
-    
     self.priceLabel.text = [NSString stringWithFormat:@"￥%@",model.price];
     NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:self.priceLabel.font,NSFontAttributeName, nil];
     CGFloat width = [self.priceLabel.text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, self.priceLabel.frame.size.height) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dict context:NULL].size.width;
     self.priceBackView.frame = CGRectMake(0, self.priceBackView.frame.origin.y, width + 10, self.priceBackView.frame.size.height);
     self.priceLabel.frame = CGRectMake(5, self.priceLabel.frame.origin.y, width, self.priceLabel.frame.size.height);
-
 }
 
 @end

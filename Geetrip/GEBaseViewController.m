@@ -31,6 +31,17 @@
     [UIView setAnimationsEnabled:YES];
 }
 
+- (void)setLeftNavBarWithTitle:(NSString *)title
+{
+    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithTitle:title style:UIBarButtonItemStyleDone target:self action:@selector(leftBarClicked)];
+    self.navigationItem.leftBarButtonItem = item;
+}
+
+- (void)leftBarClicked
+{
+    
+}
+
 - (void)setBarColorClear:(BOOL)clear
 {
     if (clear) {

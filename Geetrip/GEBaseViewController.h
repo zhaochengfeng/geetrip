@@ -10,6 +10,8 @@
 
 @interface GEBaseViewController : UIViewController
 
+- (void)setLeftNavBarWithTitle:(NSString *)title;
+- (void)leftBarClicked;
 //- (void)setBarColorClear:(BOOL)clear;
 
 @end
