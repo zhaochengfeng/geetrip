@@ -10,6 +10,6 @@
 
 @interface GEPlanDetailNetworkHelp : NSObject
 
-+ (NSURLSessionDataTask *)getPlanDetailWithPlanId:(NSString *)planId success:(void (^)(id responseOnject))successBlock failure:(void (^)(NSError *error))failureBlock;
++ (NSURLSessionDataTask *)getPlanDetailWithPlanId:(NSString *)planId adult:(NSInteger)adult child:(NSInteger)child airCity:(NSString *)airCity success:(void (^)(id responseObject))successBlock failure:(void (^)(NSError *error))failureBlock;
 
 @end

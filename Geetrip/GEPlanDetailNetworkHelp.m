@@ -8,17 +8,25 @@
 
 #import "GEPlanDetailNetworkHelp.h"
 
-#define PlanDetailUrl @"http://api.geetrip.com/trip/app/planoption/%@"
+#define PlanDetailUrl @"http://api.geetrip.com/trip/app/planoption/%@/%ld/%ld/%@"
 
 @implementation GEPlanDetailNetworkHelp
 
-+ (NSURLSessionDataTask *)getPlanDetailWithPlanId:(NSString *)planId success:(void (^)(id))successBlock failure:(void (^)(NSError *))failureBlock
++ (NSURLSessionDataTask *)getPlanDetailWithPlanId:(NSString *)planId adult:(NSInteger)adult child:(NSInteger)child airCity:(NSString *)airCity success:(void (^)(id responseObject))successBlock failure:(void (^)(NSError *error))failureBlock
 {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    return [manager GET:[NSString stringWithFormat:PlanDetailUrl,planId] parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"%@",responseObject);
+    AFHTTPSessionManager *manager = [GEBaseNetwork manager];
+    NSString *urlString = [NSString stringWithFormat:PlanDetailUrl,planId,(long)adult,(long)child,airCity];
+//    NSLog(@"...... %@",urlString);
+    return [manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+        if (successBlock) {
+            successBlock(responseObject);
+        }
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"%@",error);
+        if (failureBlock) {
+            failureBlock(error);
+        }
     }];
 }
 

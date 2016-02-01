@@ -272,11 +272,10 @@
 		713CC72C1C44D19100E6916D /* DetailViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				8907C4391C5F27F700134B59 /* NetWork */,
 				713CC72F1C44D25B00E6916D /* Model */,
 				713CC72E1C44D25000E6916D /* Cell */,
 				713CC72D1C44D24200E6916D /* ViewControllers */,
-				89AB60221C48BC5900D82DEF /* GEPlanDetailNetworkHelp.h */,
-				89AB60231C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m */,
 			);
 			name = DetailViewControllers;
 			sourceTree = "<group>";
@@ -528,6 +527,15 @@
 				890597B81C4F51A10093C144 /* GEBaseNetwork.m */,
 			);
 			name = BaseNetwork;
+			sourceTree = "<group>";
+		};
+		8907C4391C5F27F700134B59 /* NetWork */ = {
+			isa = PBXGroup;
+			children = (
+				89AB60221C48BC5900D82DEF /* GEPlanDetailNetworkHelp.h */,
+				89AB60231C48BC5900D82DEF /* GEPlanDetailNetworkHelp.m */,
+			);
+			name = NetWork;
 			sourceTree = "<group>";
 		};
 		891A376D1C46031A00E2276D /* Friends */ = {

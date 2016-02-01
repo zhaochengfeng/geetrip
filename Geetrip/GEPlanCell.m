@@ -35,15 +35,22 @@
 - (void)loadSubViews
 {
     CGFloat startPos = 15;
-    CGFloat width = 50;
+    CGFloat width = 25;
     self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(width, startPos, SCREEN_WIDTH - 2 *width, 20)];
     self.titleLabel.textAlignment = NSTextAlignmentCenter;
     self.titleLabel.font = [UIFont systemFontOfSize:15];
     [self.contentView addSubview:self.titleLabel];
     
-    startPos += 60;
+    startPos += 20 + 15 + 20;
     
-    self.planImgView = [[UIImageView alloc] initWithFrame:CGRectMake(width, startPos, SCREEN_WIDTH - 2 * width, 150)];
+    CGFloat imgHeight = 130;
+    if (SCREEN_WIDTH >= 414.0) {
+        imgHeight = 180;
+    }else if (SCREEN_WIDTH >= 375.0){
+        imgHeight = 150;
+    }
+    
+    self.planImgView = [[UIImageView alloc] initWithFrame:CGRectMake(width, startPos, SCREEN_WIDTH - 2 * width, imgHeight)];
     self.planImgView.contentMode = UIViewContentModeScaleAspectFill;
     self.planImgView.clipsToBounds = YES;
     [self.contentView addSubview:self.planImgView];
@@ -67,7 +74,8 @@
     self.priceLabel.font = [UIFont systemFontOfSize:20];
     self.priceLabel.textColor = [UIColor whiteColor];
     [self.planImgView addSubview:self.priceLabel];
-    startPos += 155;
+    
+    startPos += imgHeight + 10;
     
     self.noteLabel = [[UILabel alloc] initWithFrame:CGRectMake(width, startPos, SCREEN_WIDTH - 2 * width, 20)];
     self.noteLabel.font = [UIFont boldSystemFontOfSize:15];
@@ -84,17 +92,34 @@
 - (void)setModel:(PlanModel *)model
 {
     _model = model;
-    self.titleLabel.text = model.destname;
+    self.titleLabel.text = model.title;
     [self.logoImageView sd_setImageWithURL:[NSURL URLWithString:model.logo]];
     [self.planImgView sd_setImageWithURL:[NSURL URLWithString:model.img]];
     self.noteLabel.text = model.detail;
     self.dateLabel.text = model.intro;
     
-    self.priceLabel.text = [NSString stringWithFormat:@"￥%@",model.price];
+    self.priceLabel.text = [NSString stringWithFormat:@"￥%@",model.priceMark];
     NSDictionary *dict=[NSDictionary dictionaryWithObjectsAndKeys:self.priceLabel.font,NSFontAttributeName, nil];
     CGFloat width = [self.priceLabel.text boundingRectWithSize:CGSizeMake(CGFLOAT_MAX, self.priceLabel.frame.size.height) options:NSStringDrawingUsesLineFragmentOrigin | NSStringDrawingUsesFontLeading attributes:dict context:NULL].size.width;
     self.priceBackView.frame = CGRectMake(0, self.priceBackView.frame.origin.y, width + 10, self.priceBackView.frame.size.height);
     self.priceLabel.frame = CGRectMake(5, self.priceLabel.frame.origin.y, width, self.priceLabel.frame.size.height);
+}
+
++ (CGFloat)getCellHeight
+{
+    CGFloat startPos = 15;
+    startPos += 55;
+    
+    CGFloat imgHeight = 130;
+    if (SCREEN_WIDTH >= 414.0) {
+        imgHeight = 180;
+    }else if (SCREEN_WIDTH >= 375.0){
+        imgHeight = 150;
+    }
+    
+    startPos += imgHeight;
+    startPos += 60;
+    return startPos;
 }
 
 @end

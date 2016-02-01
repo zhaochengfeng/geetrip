@@ -32,16 +32,6 @@
     self.dataArray = [GEPlanOptionModel getTestArray];
     [self loadTableView];
     [self loadToolBar];
-    [self loadData];
-}
-
-- (void)loadData
-{
-    [GEPlanDetailNetworkHelp getPlanDetailWithPlanId:@"6" success:^(id responseOnject) {
-        
-    } failure:^(NSError *error) {
-        
-    }];
 }
 
 - (void)loadTableView

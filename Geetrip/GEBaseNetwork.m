@@ -25,7 +25,7 @@
 + (AFHTTPSessionManager *)manager
 {
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    
+    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
     return manager;
 }
 

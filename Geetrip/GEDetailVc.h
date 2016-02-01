@@ -7,7 +7,10 @@
 //
 
 #import "GEBaseViewController.h"
+#import "PlanModel.h"
 
 @interface GEDetailVc : GEBaseViewController
+
+@property (nonatomic,strong) PlanModel *model;
 
 @end

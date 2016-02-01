@@ -15,12 +15,12 @@
     [super viewDidLoad];
     self.title = @"全部主题";
     [self setLeftNavBarWithTitle:@"关闭"];
+    self.view.backgroundColor = [UIColor backGrayColor];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    
 }
 
 - (void)leftBarClicked

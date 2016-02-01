@@ -13,4 +13,6 @@
 
 @property (nonatomic,strong) PlanModel *model;
 
++ (CGFloat)getCellHeight;
+
 @end

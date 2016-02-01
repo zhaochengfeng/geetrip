@@ -27,6 +27,10 @@
         _tourdestid = [planDic objectForKey:@"tourdestid"];
         _tourdestuuid = [planDic objectForKey:@"tourdestuuid"];
         _tourid = [planDic objectForKey:@"tourid"];
+        _title = [planDic objectForKey:@"title"];
+        _priceMark = [planDic objectForKey:@"priceMark"];
+        _aircity = [NSString stringWithFormat:@"%@",[planDic objectForKey:@"aircity"]];
+        _startinfo = [planDic objectForKey:@"startinfo"];
     }
     
     return self;

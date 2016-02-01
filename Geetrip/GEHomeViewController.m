@@ -21,10 +21,11 @@
 #import "GEAllThemeVC.h"
 #import "GEDetailVc.h"
 
-#define SearchTableViewTag 100
-#define PlanTableViewTag 200
-#define ThemeTableViewTag 300
-#define NavItemTag 400
+#define SearchTableViewTag  100
+#define PlanTableViewTag    200
+#define ThemeTableViewTag   300
+#define BackScrollView      400
+#define NavItemTag          500
 
 @interface GEHomeViewController () <ADRecordDelegate,UIGestureRecognizerDelegate,UITableViewDataSource,UITableViewDelegate>
 
@@ -38,7 +39,7 @@
 @property (nonatomic,strong) UIPageControl *myPageControl;
 @property (nonatomic,strong) UIImageView *mapImageView;
 @property (nonatomic,strong) GEGoNowView *goNowView;
-
+@property (nonatomic,strong) UIScrollView *backScrollView;
 //当前正在请求的url
 @property (nonatomic,strong) NSURLSessionDataTask *currentTask;
 
@@ -69,12 +70,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    self.automaticallyAdjustsScrollViewInsets = NO;
+
+    self.backScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT)];
+    self.backScrollView.showsHorizontalScrollIndicator = NO;
+    self.backScrollView.showsVerticalScrollIndicator = NO;
+    [self.view addSubview:self.backScrollView];
+    
     self.actListDataArray = [NSMutableArray array];
     self.planListArray = [NSMutableArray array];
     self.searchDataArray = [NSMutableArray array];
     self.nationArray = [NSMutableArray array];
-    
-    self.automaticallyAdjustsScrollViewInsets = NO;
     
     [self loadSubViews];
     [self configNavBar];
@@ -106,7 +112,6 @@
     [self.currentTask cancel];
 
     self.currentTask = [GEHomeNetWorkHelp getPlanWithTourId:tourId success:^(id responseObject) {
-        NSLog(@"%@",responseObject);
         NSArray *dataArray = [responseObject objectForKey:@"data"];
         [_planListArray removeAllObjects];
 
@@ -303,12 +308,11 @@
     [self loadTableView];
     [self loadMapView];
     [self loadThemeTableView];
-    [self loadPageControl];
 }
 
 - (void)loadTableView
 {
-    self.myTableView = [[ADTranTableView alloc] initWithFrame:CGRectMake(0, 0, 300, SCREEN_WIDTH) style:UITableViewStylePlain];
+    self.myTableView = [[ADTranTableView alloc] initWithFrame:CGRectMake(0, 0, [GEPlanCell getCellHeight], SCREEN_WIDTH) style:UITableViewStylePlain];
     self.myTableView.showsHorizontalScrollIndicator = NO;
     self.myTableView.showsVerticalScrollIndicator = NO;
     self.myTableView.separatorStyle = UITableViewCellSeparatorStyleNone;
@@ -317,40 +321,40 @@
     self.myTableView.delegate = self;
     self.myTableView.dataSource = self;
     self.myTableView.pagingEnabled = YES;
-    [self.view addSubview:self.myTableView];
+    [self.backScrollView addSubview:self.myTableView];
     
-    self.myTableView.center = CGPointMake(SCREEN_WIDTH/2.0, 150 + 64);
+    self.myTableView.center = CGPointMake(SCREEN_WIDTH/2.0, [GEPlanCell getCellHeight]/2.0 + 64);
     
-    self.noPlanLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 300)];
+    self.noPlanLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, [GEPlanCell getCellHeight])];
     self.noPlanLabel.center = self.myTableView.center;
     self.noPlanLabel.backgroundColor = [UIColor whiteColor];
     self.noPlanLabel.textAlignment = NSTextAlignmentCenter;
     self.noPlanLabel.userInteractionEnabled = YES;
     self.noPlanLabel.text = @"暂时没有可选的行程";
-    [self.view addSubview:self.noPlanLabel];
+    [self.backScrollView addSubview:self.noPlanLabel];
+    
+    [self loadPageControl];
 }
 
 - (void)loadPageControl
 {
-    self.myPageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 0, SCREEN_WIDTH, 30)];
+    self.myPageControl = [[UIPageControl alloc] initWithFrame:CGRectMake(0, 64 + [GEPlanCell getCellHeight], SCREEN_WIDTH, 30)];
     self.myPageControl.userInteractionEnabled = NO;
-    self.myPageControl.center = CGPointMake(SCREEN_WIDTH/2.0, self.myTableView.center.y + self.myTableView.frame.size.height/2.0 - 10);
     self.myPageControl.pageIndicatorTintColor = [UIColor backGrayColor];
     self.myPageControl.currentPageIndicatorTintColor = [UIColor grayColor];
-    [self.view addSubview:self.myPageControl];
+    [self.backScrollView addSubview:self.myPageControl];
 }
 
 - (void)loadMapView
 {
     UIImage *img = [UIImage imageNamed:@"worldmap"];
     CGFloat mapHeight = SCREEN_WIDTH * 3.0 * img.size.height / img.size.width;
-    self.mapScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - mapHeight - Cell_height - 60, SCREEN_WIDTH, mapHeight + 40)];
+    self.mapScrollView = [[UIScrollView alloc] initWithFrame:CGRectMake(0, 64 + [GEPlanCell getCellHeight] + 30, SCREEN_WIDTH, mapHeight + 40)];
     self.mapScrollView.contentSize = CGSizeMake(SCREEN_WIDTH * 3.0, mapHeight);
-    self.mapScrollView.backgroundColor = [UIColor whiteColor];
     self.mapScrollView.showsHorizontalScrollIndicator = NO;
     self.mapScrollView.showsVerticalScrollIndicator = NO;
     self.mapScrollView.delegate = self;
-    [self.view addSubview:self.mapScrollView];
+    [self.backScrollView addSubview:self.mapScrollView];
     
     _mapImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 40, SCREEN_WIDTH * 3.0, mapHeight)];
     _mapImageView.image = img;
@@ -360,14 +364,17 @@
     self.goNowView.hidden = YES;
     [self.mapScrollView addSubview:self.goNowView];
     
+    self.backScrollView.contentSize = CGSizeMake(SCREEN_WIDTH, 64 + [GEPlanCell getCellHeight] + 30 + mapHeight + 40 + Cell_height);
+    
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(goToDetailView:)];
     [self.goNowView addGestureRecognizer:tap];
 }
 
 - (void)loadThemeTableView
 {
-    UIView *openMenuView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 30, SCREEN_HEIGHT)];
-    [self.view addSubview:openMenuView];
+    //为了右滑时打开菜单，防止与其他scrollView冲突
+    UIView *swipShowMenuView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 20, SCREEN_HEIGHT)];
+    [self.view addSubview:swipShowMenuView];
     
     self.themeTableView = [[TransverseTableView alloc] initWithFrame:CGRectMake(0, SCREEN_HEIGHT - Cell_height, SCREEN_WIDTH - Cell_width, Cell_height)];
     self.themeTableView.tag = ThemeTableViewTag;
@@ -376,6 +383,7 @@
     
     UIButton *button = [[UIButton alloc] initWithFrame:CGRectMake(SCREEN_WIDTH - Cell_width, SCREEN_HEIGHT - Cell_height, Cell_width, Cell_height)];
     [button addTarget:self action:@selector(openAllTheme) forControlEvents:UIControlEventTouchUpInside];
+    button.backgroundColor = [UIColor whiteColor];
     [self.view addSubview:button];
     button.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 30, 0);
     UIView *lineView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 0.5, Cell_height)];
@@ -535,25 +543,27 @@
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {    
     [self.mySearchBar resignFirstResponder];
+
     if (tableView.tag == SearchTableViewTag) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
-        [self goToDetailVc];
+        [self goToDetailVcWithModel:nil];
     }else{
-        [self goToDetailVc];
+        PlanModel *model = [self.planListArray objectAtIndex:indexPath.row];
+        [self goToDetailVcWithModel:model];
     }
 }
 
 - (void)goToDetailView:(UITapGestureRecognizer *)tap
 {
-//    NSInteger index = self.goNowView.tag;
-    [self goToDetailVc];
+    NSInteger index = self.goNowView.tag;
+    PlanModel *model = [self.planListArray objectAtIndex:index];
+    [self goToDetailVcWithModel:model];
 }
 
-- (void)goToDetailVc
+- (void)goToDetailVcWithModel:(PlanModel *)model
 {
-//    PlanModel *model = [self.planListArray objectAtIndex:index];
     GEDetailVc *detail = [[GEDetailVc alloc] init];
-//    detail.myPlanModel = model;
+    detail.model = model;
     [self.navigationController pushViewController:detail animated:YES];
 }
 
@@ -582,8 +592,6 @@
         self.myPageControl.currentPage = index;
         [self selectPlanAtIndex:index];
     }
-    
-
 }
 
 - (void)didReceiveMemoryWarning {

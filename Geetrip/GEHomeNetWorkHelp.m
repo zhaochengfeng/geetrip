@@ -12,14 +12,21 @@
 #define SearchUrlString @"https://geetrip.cn/api/beta1/properties/search"
 #define SearchDestinationsUrlString @"https://geetrip.cn/api/beta/destinations"
 
+//主题列表
+#define ActlistUrlString @"http://api.geetrip.com/trip/app/actlist"
+
+//行程列表
+#define DestListUrlString @"http://api.geetrip.com/trip/app/destlist/%@"
+
+#define P
 
 @implementation GEHomeNetWorkHelp
 
 + (NSURLSessionDataTask *)getActListSuccess:(void (^)(id))successBlock failure:(void (^)(NSError *))failureBlock
 {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
-    return [manager GET:@"http://api.geetrip.com/trip/app/actlist" parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
+    AFHTTPSessionManager *manager = [GEBaseNetwork manager];
+//    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+    return [manager GET:ActlistUrlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (successBlock) {
             successBlock(responseObject);
         }
@@ -32,9 +39,8 @@
 
 + (NSURLSessionDataTask *)getPlanWithTourId:(NSString *)tourId success:(void (^)(id))successBlock failure:(void (^)(NSError *))failureBlock
 {
-    NSString *urlString = [NSString stringWithFormat:@"http://api.geetrip.com/trip/app/destlist/%@",tourId];
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObjects:@"text/html", nil];
+    NSString *urlString = [NSString stringWithFormat:DestListUrlString,tourId];
+    AFHTTPSessionManager *manager = [GEBaseNetwork manager];
    return [manager GET:urlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         if (successBlock) {
             successBlock(responseObject);
@@ -48,13 +54,7 @@
 
 + (NSURLSessionDataTask *)getSearchContentWithKeyword:(NSString *)keyword success:(void (^)(id))successBlock failure:(void (^)(NSError *))failureBlock
 {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:@"DtcwG8mfX9A" password:@"gZVxwBaOFdoohyd3"];
-    AFSecurityPolicy *policy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
-    [policy setValidatesDomainName:NO];
-    [policy setAllowInvalidCertificates:YES];
-    manager.securityPolicy = policy;
-    
+    AFHTTPSessionManager *manager = [GEBaseNetwork securityManager];
     NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:keyword,@"keyword", nil];
     
     return [manager GET:SearchUrlString parameters:parameters progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
@@ -78,18 +78,8 @@
 
 + (NSURLSessionDataTask *)getDestinationsSuccess:(void (^)(id))successBlock failure:(void (^)(NSError *))failureBlock
 {
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    [manager.requestSerializer setAuthorizationHeaderFieldWithUsername:@"DtcwG8mfX9A" password:@"gZVxwBaOFdoohyd3"];
-    AFSecurityPolicy *policy = [AFSecurityPolicy policyWithPinningMode:AFSSLPinningModeNone];
-    [policy setValidatesDomainName:NO];
-    [policy setAllowInvalidCertificates:YES];
-    manager.securityPolicy = policy;
-    
-//    NSDictionary *parameters = [NSDictionary dictionaryWithObjectsAndKeys:keyword,@"keyword", nil];
-    
+    AFHTTPSessionManager *manager = [GEBaseNetwork securityManager];
     return [manager GET:SearchDestinationsUrlString parameters:nil progress:nil success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        
-        //NSLog(@"%@",responseObject);
         if ([responseObject isKindOfClass:[NSDictionary class]]) {
             failureBlock(nil);
         }else{
