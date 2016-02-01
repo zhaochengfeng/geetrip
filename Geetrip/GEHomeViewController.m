@@ -19,6 +19,7 @@
 #import "GENationView.h"
 #import "GEGoNowView.h"
 #import "GEAllThemeVC.h"
+#import "GEDetailVc.h"
 
 #define SearchTableViewTag 100
 #define PlanTableViewTag 200
@@ -536,22 +537,23 @@
     [self.mySearchBar resignFirstResponder];
     if (tableView.tag == SearchTableViewTag) {
         [tableView deselectRowAtIndexPath:indexPath animated:YES];
-        GEDetailViewController *detail = [[GEDetailViewController alloc] init];
-        [self.navigationController pushViewController:detail animated:YES];
+        [self goToDetailVc];
     }else{
-        PlanModel *model = [self.planListArray objectAtIndex:indexPath.row];
-        GEDetailViewController *detail = [[GEDetailViewController alloc] init];
-        detail.myPlanModel = model;
-        [self.navigationController pushViewController:detail animated:YES];
+        [self goToDetailVc];
     }
 }
 
 - (void)goToDetailView:(UITapGestureRecognizer *)tap
 {
-    NSInteger index = self.goNowView.tag;
-    PlanModel *model = [self.planListArray objectAtIndex:index];
-    GEDetailViewController *detail = [[GEDetailViewController alloc] init];
-    detail.myPlanModel = model;
+//    NSInteger index = self.goNowView.tag;
+    [self goToDetailVc];
+}
+
+- (void)goToDetailVc
+{
+//    PlanModel *model = [self.planListArray objectAtIndex:index];
+    GEDetailVc *detail = [[GEDetailVc alloc] init];
+//    detail.myPlanModel = model;
     [self.navigationController pushViewController:detail animated:YES];
 }
 

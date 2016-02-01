@@ -29,6 +29,7 @@
 		71914C2C1B524F9700762B8F /* GEHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 71914C2B1B524F9700762B8F /* GEHomeViewController.m */; };
 		71963A8B1BD3717E00BBD364 /* ActListModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71963A8A1BD3717E00BBD364 /* ActListModel.m */; };
 		71963A8F1BD381AA00BBD364 /* PlanModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 71963A8E1BD381AA00BBD364 /* PlanModel.m */; };
+		71A377621C5DE14E005021B1 /* GEDetailVc.m in Sources */ = {isa = PBXBuildFile; fileRef = 71A377611C5DE14E005021B1 /* GEDetailVc.m */; };
 		71EC06DC1B51E63000E8505C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC06DB1B51E63000E8505C /* main.m */; };
 		71EC06DF1B51E63000E8505C /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 71EC06DE1B51E63000E8505C /* AppDelegate.m */; };
 		71EC06E51B51E63000E8505C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71EC06E31B51E63000E8505C /* Main.storyboard */; };
@@ -118,6 +119,8 @@
 		71963A8A1BD3717E00BBD364 /* ActListModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ActListModel.m; sourceTree = "<group>"; };
 		71963A8D1BD381AA00BBD364 /* PlanModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PlanModel.h; sourceTree = "<group>"; };
 		71963A8E1BD381AA00BBD364 /* PlanModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PlanModel.m; sourceTree = "<group>"; };
+		71A377601C5DE14E005021B1 /* GEDetailVc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GEDetailVc.h; sourceTree = "<group>"; };
+		71A377611C5DE14E005021B1 /* GEDetailVc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GEDetailVc.m; sourceTree = "<group>"; };
 		71E12CCB1B54014B0052DC0A /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		71E12CCC1B5404570052DC0A /* DefineMethodHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DefineMethodHeader.h; sourceTree = "<group>"; };
 		71EC06D61B51E63000E8505C /* Geetrip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Geetrip.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -283,6 +286,8 @@
 			children = (
 				716E1E411B7B8E3800BD3E6F /* GEDetailViewController.h */,
 				716E1E421B7B8E3800BD3E6F /* GEDetailViewController.m */,
+				71A377601C5DE14E005021B1 /* GEDetailVc.h */,
+				71A377611C5DE14E005021B1 /* GEDetailVc.m */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -843,6 +848,7 @@
 				890597B91C4F51A10093C144 /* GEBaseNetwork.m in Sources */,
 				717C54F91C43E850001481BD /* GEMenuViewController.m in Sources */,
 				713CC7321C44D31B00E6916D /* GEPlanOptionModel.m in Sources */,
+				71A377621C5DE14E005021B1 /* GEDetailVc.m in Sources */,
 				71443ECF1BD34C8A00F6D294 /* GEHomeNetWorkHelp.m in Sources */,
 				8948A8D41C465C2F0004FC2F /* DestinationModel.m in Sources */,
 				717C54F41C43E6CB001481BD /* ICSDrawerController.m in Sources */,
